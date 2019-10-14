@@ -1,0 +1,8 @@
+D:/Libraries/Documents/repos/Advanced-Programming/build/CMakeFiles/src.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/CMakeFiles/INSTALL.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/CMakeFiles/ALL_BUILD.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/external/CMakeFiles/INSTALL.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/CMakeFiles/freeglut.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/CMakeFiles/INSTALL.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/CMakeFiles/freeglut_static.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/CMakeFiles/ALL_BUILD.dir
