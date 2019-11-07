@@ -30,6 +30,7 @@ set(SRC src)
 add_executable( ${SRC}
 	${SRC}/main.cpp
 	${SRC}/freeglutd.dll
+	${SRC}/vecmath.h
 )
 
 TARGET_LINK_LIBRARIES(${SRC} freeglut freeglut_static)

@@ -4,6 +4,7 @@
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
@@ -12,5 +13,16 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{BFE3EF4C-FAB0-39FE-B7DB-0846330C4FF6}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\vecmath.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IGameObject.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Camera.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
