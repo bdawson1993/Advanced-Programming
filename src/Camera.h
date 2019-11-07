@@ -1,6 +1,8 @@
 #pragma once
 #include "vecmath.h"
+#include <iostream>
 
+using namespace std;
 class Camera
 {
 	vec3 position;

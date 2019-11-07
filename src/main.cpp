@@ -5,19 +5,21 @@
 using namespace std;
 
 Camera cam = Camera();
-
+int time;
 
 void RenderScene(void)
 {
-
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glLoadIdentity();
+	gluLookAt(cam.Position()(0), cam.Position()(1), cam.Position()(2), cam.LookingAt()(0), cam.LookingAt()(1), cam.LookingAt()(2), 0.0f, 1.0f, 0.0f);
 
-	glBegin(GL_TRIANGLES);
-	glVertex3f(-0.5, -0.5, 0.0);
-	glVertex3f(0.5, 0.0, 0.0);
-	glVertex3f(0.0, 0.5, 0.0);
-	glEnd();
+	glPushMatrix();
+	glutSolidSphere(1, 12, 12);
+	glPopMatrix();
 
+
+	//swap buffers
+	glFlush();
 	glutSwapBuffers();
 }
 
@@ -33,12 +35,8 @@ void SpecKeyboardUpFunc(int key, int x, int y)
 
 void KeyboardFunc(unsigned char key, int x, int y)
 {
-	cout << key << endl;
-	cam.Update(key, 10);
-	vec3 gCamPos = cam.Position();
-	vec3 gCamLookAt = cam.LookingAt();
-
-	gluLookAt(gCamPos(0), gCamPos(1), gCamPos(2), gCamLookAt(0), gCamLookAt(1), gCamLookAt(2), 0.0f, 1.0f, 0.0f);
+	cout << "key" << endl;
+	cam.Update(key, time);
 }
 
 void KeyboardUpFunc(unsigned char key, int x, int y)
@@ -63,8 +61,8 @@ void ChangeSize(int w, int h)
 	gluPerspective(45, ratio, 0.2, 1000);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	gluLookAt(0.0,0.7,2.1, 0.0,0.0,0.0, 0.0f,1.0f,0.0f);
-	//gluLookAt(gCamPos(0), gCamPos(1), gCamPos(2), gCamLookAt(0), gCamLookAt(1), gCamLookAt(2), 0.0f, 1.0f, 0.0f);
+	//gluLookAt(0.0,0.7,2.1, 0.0,0.0,0.0, 0.0f,1.0f,0.0f);
+	gluLookAt(cam.Position()(0), cam.Position()(1), cam.Position()(2), cam.LookingAt()(0), cam.LookingAt()(1), cam.LookingAt()(2), 0.0f, 1.0f, 0.0f);
 }
 
 void InitLights(void)
@@ -89,7 +87,7 @@ void InitLights(void)
 
 void UpdateScene(int ms)
 {
-	
+	time = ms;
 }
 
 int main(int argc, char **argv)
@@ -106,7 +104,7 @@ int main(int argc, char **argv)
 	glutReshapeFunc(ChangeSize);
 	glutIdleFunc(RenderScene);
 
-	glutIgnoreKeyRepeat(1);
+	glutIgnoreKeyRepeat(0);
 	glutKeyboardFunc(KeyboardFunc);
 	glutKeyboardUpFunc(KeyboardUpFunc);
 	glutSpecialFunc(SpecKeyboardFunc);
