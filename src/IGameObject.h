@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "vecmath.h"
+#include <GL/glut.h>
 
 
 using namespace std;
@@ -15,6 +16,7 @@ private:
 
 
 public:
-	virtual void Update();
-	virtual void Draw();
+	virtual void Start() = 0;
+	virtual void Update() = 0;
+	virtual void Draw() = 0;
 };

@@ -261,6 +261,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Camera.cpp" />
+    <ClCompile Include="..\src\GolfCourse.cpp" />
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp" />
     <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
   </ItemGroup>
@@ -280,6 +281,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Camera.h" />
+    <ClInclude Include="..\src\GolfCourse.h" />
     <ClInclude Include="..\src\IGameObject.h" />
     <ClInclude Include="..\src\vecmath.h" />
   </ItemGroup>

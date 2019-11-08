@@ -1,10 +1,12 @@
 #include <GL/glut.h>
 #include <iostream>
 #include "Camera.h"
+#include "GolfCourse.h"
 
 using namespace std;
 
 Camera cam = Camera();
+GolfCourse* golfCourse = new GolfCourse();
 int time;
 
 void RenderScene(void)
@@ -12,9 +14,12 @@ void RenderScene(void)
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
 	gluLookAt(cam.Position()(0), cam.Position()(1), cam.Position()(2), cam.LookingAt()(0), cam.LookingAt()(1), cam.LookingAt()(2), 0.0f, 1.0f, 0.0f);
+	
+	glColor3f(1.0, 1.0, 1.0);
 
+	//draw golf course
 	glPushMatrix();
-	glutSolidSphere(1, 12, 12);
+		golfCourse->Draw();
 	glPopMatrix();
 
 
@@ -104,12 +109,16 @@ int main(int argc, char **argv)
 	glutReshapeFunc(ChangeSize);
 	glutIdleFunc(RenderScene);
 
+
+
 	glutIgnoreKeyRepeat(0);
 	glutKeyboardFunc(KeyboardFunc);
 	glutKeyboardUpFunc(KeyboardUpFunc);
 	glutSpecialFunc(SpecKeyboardFunc);
 	glutSpecialUpFunc(SpecKeyboardUpFunc);
 	glEnable(GL_DEPTH_TEST);
+	golfCourse->Start();
+
 	glutMainLoop();
 
 	return 1;
