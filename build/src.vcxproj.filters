@@ -6,6 +6,7 @@
     </ClCompile>
     <ClCompile Include="..\src\Camera.cpp" />
     <ClCompile Include="..\src\GolfCourse.cpp" />
+    <ClCompile Include="..\src\Side.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
@@ -26,5 +27,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\GolfCourse.h" />
+    <ClInclude Include="..\src\Side.h" />
   </ItemGroup>
 </Project>

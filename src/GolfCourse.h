@@ -2,12 +2,10 @@
 #include "IGameObject.h"
 #include <vector>
 #include <iostream>
+#include "Side.h"
 
 using namespace std;
-struct Corner
-{
-	vec2 vertice[2];
-};
+
 
 
 class GolfCourse : public IGameObject
@@ -25,7 +23,7 @@ public:
 	virtual void Draw() override;
 
 private:
-	vector<Corner> corners;
+	vector<Side> corners;
 	void AddCorner(vec2 i, vec2 y);
 	
 

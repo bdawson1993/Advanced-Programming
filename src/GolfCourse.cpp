@@ -10,10 +10,16 @@ GolfCourse::~GolfCourse()
 
 void GolfCourse::Start()
 {
-	AddCorner(vec2(0.6f, -1.2f), vec2(-0.6f, 1.2f));
+	AddCorner(vec2(-0.6f, -1.2f), vec2(-0.6f, 1.2f));
+
 	AddCorner(vec2(-0.6f, 1.2f), vec2(0.6f, 1.2f));
+
 	AddCorner(vec2(0.6f, 1.2f), vec2(0.6f, -1.2f));
-	AddCorner(vec2(0.6f, -1.2f), vec2(0.6f, -1.2f));
+
+	//AddCorner(vec2(0.2f, 1.2f), vec2(0.6f, -1.2f));
+
+	AddCorner(vec2(0.6f, -1.2f), vec2(-0.6f, -1.2f));
+	
 }
 
 void GolfCourse::Update()
@@ -38,7 +44,7 @@ void GolfCourse::Draw()
 
 void GolfCourse::AddCorner(vec2 i, vec2 y)
 {
-	Corner corner;
+	Side corner;
 	corner.vertice[0] = i;
 	corner.vertice[1] = y;
 
