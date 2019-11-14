@@ -16,6 +16,8 @@ public:
 	Ball();
 	~Ball();
 
+	vec2 Position();
+
 	void ApplyForce(vec2 force);
 
 	// Inherited via IGameObject

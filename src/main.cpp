@@ -3,12 +3,15 @@
 #include "Camera.h"
 #include "GolfCourse.h"
 #include "Ball.h"
+#include "Cue.h"
 
 using namespace std;
 
 Camera cam = Camera();
 GolfCourse* golfCourse = new GolfCourse();
 Ball* ball = new Ball();
+Cue* cue = new Cue();
+
 int time;
 
 void RenderScene(void)
@@ -26,6 +29,10 @@ void RenderScene(void)
 
 	glPushMatrix();
 		ball->Draw();
+	glPopMatrix();
+
+	glPushMatrix();
+		cue->Draw();
 	glPopMatrix();
 
 
@@ -51,7 +58,7 @@ void KeyboardFunc(unsigned char key, int x, int y)
 
 	if (key == ' ')
 	{
-		ball->SetVelocity();
+		//ball->ApplyForce()
 	}
 
 	
@@ -107,6 +114,7 @@ void UpdateScene(int ms)
 {
 	time = ms;
 	ball->Update(ms);
+	cue->SetBallPosition(ball->Position());
 
 	glutTimerFunc(10, UpdateScene, 10);
 	glutPostRedisplay();

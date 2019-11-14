@@ -30,6 +30,11 @@ Ball::~Ball()
 {
 }
 
+vec2 Ball::Position()
+{
+	return posistion;
+}
+
 void Ball::ApplyForce(vec2 force)
 {
 	vec2 imp((-sin(0.0) * 0.25 * 8.0),
@@ -44,7 +49,7 @@ void Ball::Start()
 
 void Ball::Update(int ms)
 {
-	cout << velocity(0) << " " << velocity(1) << endl;
+	//cout << velocity(0) << " " << velocity(1) << endl;
 	ApplyFrictionForce(ms);
 	posistion += ((velocity * ms) / 1000.0f);
 
@@ -58,6 +63,6 @@ void Ball::Update(int ms)
 void Ball::Draw()
 {
 	glTranslatef(posistion(0), (radius/2.0), posistion(1));
-		glutSolidSphere(radius, 32, 32);
+		glutWireSphere(radius, 32, 32);
 	glColor3f(0, 0, 1.0);
 }

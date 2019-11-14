@@ -16,6 +16,7 @@
     <ClCompile Include="..\src\Side.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Cue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
@@ -47,6 +48,9 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\src\vecmath.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Cue.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
