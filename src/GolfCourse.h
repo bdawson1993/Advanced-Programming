@@ -18,7 +18,7 @@ public:
 	// Inherited via IGameObject
 	virtual void Start() override;
 
-	virtual void Update() override;
+	virtual void Update(int ms) override;
 
 	virtual void Draw() override;
 

@@ -14,7 +14,7 @@ Camera::~Camera()
 
 void Camera::Update(char key, int ms)
 {
-	cout << position(0) << " " << position(1) << " " << position(2) << endl;
+	//cout << position(0) << " " << position(1) << " " << position(2) << endl;
 	const vec3 up(0.0, 1.0, 0.0);
 
 	//move came left
@@ -23,7 +23,7 @@ void Camera::Update(char key, int ms)
 		vec3 camDir = (lookingAt - position).Normalised();
 		vec3 localL = up.Cross(camDir);
 		vec3 inc = (localL * ((speed * ms) / 1000.0));
-		cout << inc(0) << " " << inc(1) << " " << inc(2) << endl;
+		//cout << inc(0) << " " << inc(1) << " " << inc(2) << endl;
 		position += inc;
 		lookingAt += inc;
 	}

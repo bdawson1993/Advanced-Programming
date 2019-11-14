@@ -9,14 +9,14 @@ using namespace std;
 
 class IGameObject
 {
-private:
+protected:
 	string name;
-	vec3 posistion;
+	vec2 posistion;
 	
 
 
 public:
 	virtual void Start() = 0;
-	virtual void Update() = 0;
+	virtual void Update(int ms) = 0;
 	virtual void Draw() = 0;
 };

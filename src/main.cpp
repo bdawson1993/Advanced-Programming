@@ -2,11 +2,13 @@
 #include <iostream>
 #include "Camera.h"
 #include "GolfCourse.h"
+#include "Ball.h"
 
 using namespace std;
 
 Camera cam = Camera();
 GolfCourse* golfCourse = new GolfCourse();
+Ball* ball = new Ball();
 int time;
 
 void RenderScene(void)
@@ -20,6 +22,10 @@ void RenderScene(void)
 	//draw golf course
 	glPushMatrix();
 		golfCourse->Draw();
+	glPopMatrix();
+
+	glPushMatrix();
+		ball->Draw();
 	glPopMatrix();
 
 
@@ -40,8 +46,15 @@ void SpecKeyboardUpFunc(int key, int x, int y)
 
 void KeyboardFunc(unsigned char key, int x, int y)
 {
-	cout << "key" << endl;
+	cout << key << endl;
 	cam.Update(key, time);
+
+	if (key == ' ')
+	{
+		ball->SetVelocity();
+	}
+
+	
 }
 
 void KeyboardUpFunc(unsigned char key, int x, int y)
@@ -93,6 +106,10 @@ void InitLights(void)
 void UpdateScene(int ms)
 {
 	time = ms;
+	ball->Update(ms);
+
+	glutTimerFunc(10, UpdateScene, 10);
+	glutPostRedisplay();
 }
 
 int main(int argc, char **argv)
@@ -102,7 +119,7 @@ int main(int argc, char **argv)
 	glutInitWindowPosition(0, 0);
 	glutInitWindowSize(1000, 700);
 	//glutFullScreen();
-	glutCreateWindow("MSc Workshop : Pool Game");
+	glutCreateWindow("Golf Game");
 
 	glutDisplayFunc(RenderScene);
 	glutTimerFunc(10, UpdateScene, 10);

@@ -22,13 +22,12 @@ void GolfCourse::Start()
 	
 }
 
-void GolfCourse::Update()
+void GolfCourse::Update(int ms)
 {
 }
 
 void GolfCourse::Draw()
 {
-	cout << corners.size() << endl;
 	for (int i = 0; i != corners.size(); i++)
 	{
 		glBegin(GL_LINE_LOOP);
