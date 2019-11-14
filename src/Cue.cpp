@@ -9,6 +9,14 @@ Cue::~Cue()
 {
 }
 
+vec2 Cue::Force()
+{
+	vec2 imp( (-sin(angle) * power * 8.0),
+		(-cos(angle) * power * 8.0));
+
+		return imp;
+}
+
 void Cue::SetBallPosition(vec2 pos)
 {
 	ballPosition = pos;
@@ -20,6 +28,7 @@ void Cue::Start()
 
 void Cue::Update(int ms)
 {
+	IGameObject::Update(ms);
 }
 
 void Cue::Draw()
@@ -35,4 +44,18 @@ void Cue::Draw()
 		glColor3f(1.0, 1.0, 1.0);
 	glEnd();
 
+}
+
+void Cue::Input(char key)
+{
+	switch (key)
+	{
+	case(GLUT_KEY_LEFT):
+		angle -= ((2.0f * time) / 1000);
+		break;
+
+	case(GLUT_KEY_RIGHT):
+		angle += ((2.0f * time) / 1000);
+		break;
+	}
 }

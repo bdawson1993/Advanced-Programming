@@ -12,11 +12,13 @@ class IGameObject
 protected:
 	string name;
 	vec2 posistion;
+	int time;
 	
 
 
 public:
 	virtual void Start() = 0;
-	virtual void Update(int ms) = 0;
+	virtual void Update(int ms) { time = ms; };
 	virtual void Draw() = 0;
+	virtual void Input(char key) = 0;
 };

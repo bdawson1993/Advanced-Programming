@@ -22,6 +22,8 @@ public:
 
 	virtual void Draw() override;
 
+	virtual void Input(char key) override;
+
 private:
 	vector<Side> corners;
 	void AddCorner(vec2 i, vec2 y);

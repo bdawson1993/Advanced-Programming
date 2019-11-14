@@ -43,7 +43,7 @@ void RenderScene(void)
 
 void SpecKeyboardFunc(int key, int x, int y)
 {
-
+	cue->Input(key);
 }
 
 void SpecKeyboardUpFunc(int key, int x, int y)
@@ -53,12 +53,13 @@ void SpecKeyboardUpFunc(int key, int x, int y)
 
 void KeyboardFunc(unsigned char key, int x, int y)
 {
-	cout << key << endl;
+	cout << (int)key << endl;
 	cam.Update(key, time);
+	
 
 	if (key == ' ')
 	{
-		//ball->ApplyForce()
+		ball->ApplyForce(cue->Force());
 	}
 
 	
@@ -115,6 +116,7 @@ void UpdateScene(int ms)
 	time = ms;
 	ball->Update(ms);
 	cue->SetBallPosition(ball->Position());
+	cue->Update(ms);
 
 	glutTimerFunc(10, UpdateScene, 10);
 	glutPostRedisplay();

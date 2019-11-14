@@ -41,6 +41,10 @@ void GolfCourse::Draw()
 
 }
 
+void GolfCourse::Input(char key)
+{
+}
+
 void GolfCourse::AddCorner(vec2 i, vec2 y)
 {
 	Side corner;

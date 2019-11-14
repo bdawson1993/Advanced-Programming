@@ -27,5 +27,7 @@ public:
 
 	virtual void Draw() override;
 
+	virtual void Input(char key) override;
+
 };
 

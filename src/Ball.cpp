@@ -66,3 +66,7 @@ void Ball::Draw()
 		glutWireSphere(radius, 32, 32);
 	glColor3f(0, 0, 1.0);
 }
+
+void Ball::Input(char key)
+{
+}
