@@ -16,7 +16,10 @@ public:
 	Ball();
 	~Ball();
 
+
+	vec2 Velocity();
 	vec2 Position();
+	float Radius();
 
 	void ApplyForce(vec2 force);
 
@@ -28,6 +31,8 @@ public:
 	virtual void Draw() override;
 
 	virtual void Input(char key) override;
+
+	virtual void HasCollided(string name) override;
 
 };
 

@@ -39,6 +39,32 @@ void RenderScene(void)
 	//swap buffers
 	glFlush();
 	glutSwapBuffers();
+
+
+	//collision checks
+	vector<Side> sides = golfCourse->Corners();
+
+	for (int i = 0; i != sides.size(); i++)
+	{
+		//cout << ball->Velocity().Dot(sides[i].normal);
+		if (ball->Velocity().Dot(sides[i].normal) >= 0.0)
+		{
+			continue; //cannot have hit check next side
+		}
+
+		vec2 relPos = ball->Position() - sides[i].vertice[0];
+		double sep = relPos.Dot(sides[i].normal);
+
+		cout << sep << endl;
+		if (sep > ball->Radius())
+		{
+			continue;
+		}
+
+		ball->HasCollided("HEY");
+
+	}
+
 }
 
 void SpecKeyboardFunc(int key, int x, int y)
@@ -117,6 +143,11 @@ void UpdateScene(int ms)
 	ball->Update(ms);
 	cue->SetBallPosition(ball->Position());
 	cue->Update(ms);
+
+
+
+
+	
 
 	glutTimerFunc(10, UpdateScene, 10);
 	glutPostRedisplay();

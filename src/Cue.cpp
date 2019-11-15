@@ -59,3 +59,7 @@ void Cue::Input(char key)
 		break;
 	}
 }
+
+void Cue::HasCollided(string name)
+{
+}

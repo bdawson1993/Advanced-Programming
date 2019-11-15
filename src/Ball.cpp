@@ -30,9 +30,19 @@ Ball::~Ball()
 {
 }
 
+vec2 Ball::Velocity()
+{
+	return velocity;
+}
+
 vec2 Ball::Position()
 {
 	return posistion;
+}
+
+float Ball::Radius()
+{
+	return radius;
 }
 
 void Ball::ApplyForce(vec2 force)
@@ -69,4 +79,11 @@ void Ball::Draw()
 
 void Ball::Input(char key)
 {
+}
+
+void Ball::HasCollided(string name)
+{
+	cout << name << endl;
+	velocity = 0;
+
 }

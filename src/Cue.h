@@ -27,6 +27,8 @@ public:
 
 	virtual void Input(char key) override;
 
+	virtual void HasCollided(string name) override;
+
 };
 
 

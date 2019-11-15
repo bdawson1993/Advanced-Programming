@@ -15,6 +15,8 @@ public:
 	GolfCourse();
 	~GolfCourse();
 
+	vector<Side> Corners();
+
 	// Inherited via IGameObject
 	virtual void Start() override;
 
@@ -24,9 +26,14 @@ public:
 
 	virtual void Input(char key) override;
 
+	virtual void HasCollided(string name) override;
+
 private:
 	vector<Side> corners;
 	void AddCorner(vec2 i, vec2 y);
+	
+
+
 	
 
 };
