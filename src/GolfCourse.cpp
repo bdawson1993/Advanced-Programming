@@ -61,6 +61,6 @@ void GolfCourse::AddCorner(vec2 i, vec2 y)
 	corners.push_back(corner);
 }
 
-void GolfCourse::HasCollided(string name)
+void GolfCourse::HasCollided(string name, vec2 collide)
 {
 }

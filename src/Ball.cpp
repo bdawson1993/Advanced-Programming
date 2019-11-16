@@ -35,11 +35,6 @@ vec2 Ball::Velocity()
 	return velocity;
 }
 
-vec2 Ball::Position()
-{
-	return posistion;
-}
-
 float Ball::Radius()
 {
 	return radius;
@@ -74,6 +69,7 @@ void Ball::Draw()
 {
 	glTranslatef(posistion(0), (radius/2.0), posistion(1));
 		glutWireSphere(radius, 32, 32);
+	//glutSolidCube(0.1);
 	glColor3f(0, 0, 1.0);
 }
 
@@ -81,9 +77,16 @@ void Ball::Input(char key)
 {
 }
 
-void Ball::HasCollided(string name)
+void Ball::HasCollided(string name, vec2 collide)
 {
 	cout << name << endl;
-	velocity = 0;
+	
+
+	if (name == "SIDE")
+	{
+		double comp = velocity.Dot(collide) * (1.0 + 0.5f);
+		vec2 delta = -(collide * comp);
+		velocity += delta;
+	}
 
 }

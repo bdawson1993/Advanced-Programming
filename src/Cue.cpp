@@ -60,6 +60,6 @@ void Cue::Input(char key)
 	}
 }
 
-void Cue::HasCollided(string name)
+void Cue::HasCollided(string name, vec2 collide)
 {
 }

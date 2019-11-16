@@ -4,6 +4,7 @@
 #include "GolfCourse.h"
 #include "Ball.h"
 #include "Cue.h"
+#include "Hole.h"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ Camera cam = Camera();
 GolfCourse* golfCourse = new GolfCourse();
 Ball* ball = new Ball();
 Cue* cue = new Cue();
+Hole* hole = new Hole(vec2(0, 0));
 
 int time;
 
@@ -35,13 +37,17 @@ void RenderScene(void)
 		cue->Draw();
 	glPopMatrix();
 
+	glPushMatrix();
+		hole->Draw();
+	glPopMatrix();
+
 
 	//swap buffers
 	glFlush();
 	glutSwapBuffers();
 
 
-	//collision checks
+	//collision checks -- with side
 	vector<Side> sides = golfCourse->Corners();
 
 	for (int i = 0; i != sides.size(); i++)
@@ -61,9 +67,25 @@ void RenderScene(void)
 			continue;
 		}
 
-		ball->HasCollided("HEY");
+		ball->HasCollided("SIDE", sides[i].normal);
 
 	}
+
+	//collision check with hole
+	vec2 relPosn = ball->Position() - hole->Position();
+	float dist = (float)relPosn.Magnitude();
+	vec2 relPosNorm = relPosn.Normalise();
+	vec2 relVelocity = ball->Velocity() - 0;
+
+	if (relVelocity.Dot(relPosNorm) <= 0.0)
+	{
+		if (dist < (ball->Radius() + ball->Radius())) //ball and hold has same radius
+		{
+			ball->HasCollided("HOLE", vec2(0,0));
+		}
+	}
+
+
 
 }
 

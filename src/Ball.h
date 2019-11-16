@@ -18,7 +18,6 @@ public:
 
 
 	vec2 Velocity();
-	vec2 Position();
 	float Radius();
 
 	void ApplyForce(vec2 force);
@@ -32,7 +31,7 @@ public:
 
 	virtual void Input(char key) override;
 
-	virtual void HasCollided(string name) override;
+	virtual void HasCollided(string name, vec2 collide) override;
 
 };
 
