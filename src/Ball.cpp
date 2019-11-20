@@ -90,3 +90,8 @@ void Ball::HasCollided(string name, vec2 collide)
 	}
 
 }
+
+void Ball::RenderText()
+{
+	text.RenderText("Hello world", 10, 10);
+}

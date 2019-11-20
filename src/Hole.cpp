@@ -28,3 +28,7 @@ void Hole::Input(char key)
 void Hole::HasCollided(string name, vec2 collide)
 {
 }
+
+void Hole::RenderText()
+{
+}

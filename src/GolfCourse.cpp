@@ -64,3 +64,7 @@ void GolfCourse::AddCorner(vec2 i, vec2 y)
 void GolfCourse::HasCollided(string name, vec2 collide)
 {
 }
+
+void GolfCourse::RenderText()
+{
+}

@@ -1,4 +1,4 @@
-#include <GL/glut.h>
+#include <GL/freeglut.h>
 #include <iostream>
 #include "Camera.h"
 #include "GolfCourse.h"
@@ -16,12 +16,17 @@ Hole* hole = new Hole(vec2(0, 0));
 
 int time;
 
+
 void RenderScene(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glPushMatrix();
 	glLoadIdentity();
 	gluLookAt(cam.Position()(0), cam.Position()(1), cam.Position()(2), cam.LookingAt()(0), cam.LookingAt()(1), cam.LookingAt()(2), 0.0f, 1.0f, 0.0f);
 	
+	
+
+
 	glColor3f(1.0, 1.0, 1.0);
 
 	//draw golf course
@@ -42,6 +47,9 @@ void RenderScene(void)
 	glPopMatrix();
 
 
+	ball->RenderText();
+
+	
 	//swap buffers
 	glFlush();
 	glutSwapBuffers();
@@ -61,7 +69,7 @@ void RenderScene(void)
 		vec2 relPos = ball->Position() - sides[i].vertice[0];
 		double sep = relPos.Dot(sides[i].normal);
 
-		cout << sep << endl;
+		//cout << sep << endl;
 		if (sep > ball->Radius())
 		{
 			continue;
@@ -197,7 +205,12 @@ int main(int argc, char **argv)
 	glutSpecialFunc(SpecKeyboardFunc);
 	glutSpecialUpFunc(SpecKeyboardUpFunc);
 	glEnable(GL_DEPTH_TEST);
+
 	golfCourse->Start();
+	golfCourse->Init();
+	ball->Init();
+	cue->Init();
+	hole->Init();
 
 	glutMainLoop();
 

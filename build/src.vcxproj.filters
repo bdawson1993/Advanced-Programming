@@ -4,21 +4,26 @@
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Ball.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\GolfCourse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Side.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Cue.cpp" />
     <ClCompile Include="..\src\Hole.cpp" />
-    <ClCompile Include="..\src\IGameObject.cpp" />
+    <ClCompile Include="..\src\TextRenderer.cpp" />
+    <ClCompile Include="..\src\Ball.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GolfCourse.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IGameObject.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Cue.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
@@ -32,18 +37,15 @@
       <UniqueIdentifier>{6be544e1-43bf-47b7-9f7d-15fe4b6088f8}</UniqueIdentifier>
       <Extensions>.h</Extensions>
     </Filter>
+    <Filter Include="Headers\Game Objects">
+      <UniqueIdentifier>{d71ae77f-4910-47e9-a089-decb9a9fab9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Objects">
+      <UniqueIdentifier>{002fbe0f-0f64-407d-a3bf-35b1b6414736}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Ball.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Camera.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\GolfCourse.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\IGameObject.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Side.h">
@@ -52,11 +54,23 @@
     <ClInclude Include="..\src\vecmath.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Cue.h">
+    <ClInclude Include="..\src\TextRenderer.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Ball.h">
+      <Filter>Headers\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Cue.h">
+      <Filter>Headers\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GolfCourse.h">
+      <Filter>Headers\Game Objects</Filter>
+    </ClInclude>
     <ClInclude Include="..\src\Hole.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IGameObject.h">
+      <Filter>Headers\Game Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

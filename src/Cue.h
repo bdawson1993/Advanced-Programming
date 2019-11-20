@@ -29,6 +29,8 @@ public:
 
 	virtual void HasCollided(string name, vec2 collide) override;
 
+	virtual void RenderText() override;
+
 };
 
 

@@ -28,6 +28,8 @@ public:
 
 	virtual void HasCollided(string name, vec2 collide) override;
 
+	virtual void RenderText() override;
+
 private:
 	vector<Side> corners;
 	void AddCorner(vec2 i, vec2 y);

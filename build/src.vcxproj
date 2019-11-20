@@ -267,6 +267,7 @@
     <ClCompile Include="..\src\Hole.cpp" />
     <ClCompile Include="..\src\IGameObject.cpp" />
     <ClCompile Include="..\src\Side.cpp" />
+    <ClCompile Include="..\src\TextRenderer.cpp" />
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp" />
     <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
   </ItemGroup>
@@ -292,6 +293,7 @@
     <ClInclude Include="..\src\Hole.h" />
     <ClInclude Include="..\src\IGameObject.h" />
     <ClInclude Include="..\src\Side.h" />
+    <ClInclude Include="..\src\TextRenderer.h" />
     <ClInclude Include="..\src\vecmath.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -16,7 +16,6 @@ public:
 	Ball();
 	~Ball();
 
-
 	vec2 Velocity();
 	float Radius();
 
@@ -32,6 +31,8 @@ public:
 	virtual void Input(char key) override;
 
 	virtual void HasCollided(string name, vec2 collide) override;
+
+	virtual void RenderText() override;
 
 };
 
