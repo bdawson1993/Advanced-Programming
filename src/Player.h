@@ -1,12 +1,13 @@
 #pragma once
 #include "IGameObject.h"
+#include "Ball.h"
+#include "Cue.h"
 
-class Hole : public IGameObject
+class Player : public IGameObject
 {
-
 public:
-	Hole(vec2 pos);
-	~Hole();
+	Player();
+	~Player();
 
 	// Inherited via IGameObject
 	virtual void Start() override;
@@ -14,7 +15,12 @@ public:
 	virtual void Input(char key) override;
 	virtual void HasCollided(string name, vec2 collide) override;
 	virtual void RenderText() override;
+	virtual void Update(int ms) override;
+	Ball PlayerBall();
 
 private:
-	float radius = 0.05f;
+	Ball* ball;
+	Cue* cue;
+
+	
 };

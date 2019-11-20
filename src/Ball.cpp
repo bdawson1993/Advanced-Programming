@@ -23,7 +23,7 @@ void Ball::ApplyFrictionForce(int ms)
 
 Ball::Ball() : IGameObject()
 {
-	posistion(1) = 0.9;
+	posistion(1) = -1.9;
 }
 
 Ball::~Ball()
@@ -78,6 +78,7 @@ void Ball::Input(char key)
 	if (key == ' ')
 	{
 		hitCount++;
+		
 	}
 
 }
