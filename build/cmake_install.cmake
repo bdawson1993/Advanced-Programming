@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/computing/Desktop/Advanced-Programming
+# Install script for directory: D:/Libraries/Documents/repos/Advanced-Programming
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/computing/Desktop/Advanced-Programming/build/external/cmake_install.cmake")
+  include("D:/Libraries/Documents/repos/Advanced-Programming/build/external/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/computing/Desktop/Advanced-Programming/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Libraries/Documents/repos/Advanced-Programming/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

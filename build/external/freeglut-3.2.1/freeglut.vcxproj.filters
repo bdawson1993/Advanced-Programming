@@ -1,167 +1,167 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_callbacks.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_callbacks.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_cursor.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_cursor.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_display.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_display.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_ext.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_ext.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_font_data.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_font_data.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_gamemode.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_gamemode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_geometry.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_geometry.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_gl2.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_gl2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_init.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_init.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_input_devices.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_input_devices.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_joystick.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_joystick.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_main.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_misc.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_misc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_overlay.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_overlay.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_spaceball.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_spaceball.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_state.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_state.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_stroke_mono_roman.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_stroke_mono_roman.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_stroke_roman.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_stroke_roman.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_structure.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_structure.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_teapot.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_teapot.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_videoresize.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_videoresize.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_window.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_window.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_font.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_font.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_menu.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_menu.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_cursor_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_cursor_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_display_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_display_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_ext_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_ext_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_gamemode_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_gamemode_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_init_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_init_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_input_devices_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_input_devices_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_joystick_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_joystick_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_main_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_main_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_menu_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_menu_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_spaceball_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_spaceball_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_state_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_state_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_structure_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_structure_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_window_mswin.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_window_mswin.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\util\xparsegeometry_repl.c">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\util\xparsegeometry_repl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut_ucall.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut_ucall.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut_ext.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut_ext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut_std.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include\GL\freeglut_std.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_gl2.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_gl2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_init.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_init.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_internal.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_callback_macros.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_callback_macros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\fg_teapot_data.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\fg_teapot_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_internal_mswin.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\mswin\fg_internal_mswin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src\util\xparsegeometry_repl.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src\util\xparsegeometry_repl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="C:\Users\computing\Desktop\Advanced-Programming\build\freeglut.rc">
+    <ResourceCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\build\freeglut.rc">
       <Filter>Source Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{156D12C2-776B-3CA3-9661-9CF80A827A94}</UniqueIdentifier>
+      <UniqueIdentifier>{E4596F3E-3C2D-3CCD-B426-4573EFCFE0D1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{F12A65C7-7874-3D05-A630-859CF940D780}</UniqueIdentifier>
+      <UniqueIdentifier>{BFE3EF4C-FAB0-39FE-B7DB-0846330C4FF6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

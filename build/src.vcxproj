@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{052FB12B-05FF-30D2-8F2F-4F5ED43EF9D5}</ProjectGuid>
+    <ProjectGuid>{95CCFF41-25DA-37B9-93E6-E44937BF478E}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\computing\Desktop\Advanced-Programming\build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Libraries\Documents\repos\Advanced-Programming\build\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\computing\Desktop\Advanced-Programming\build\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Libraries\Documents\repos\Advanced-Programming\build\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\computing\Desktop\Advanced-Programming\build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Libraries\Documents\repos\Advanced-Programming\build\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">src.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">src</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\computing\Desktop\Advanced-Programming\build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Libraries\Documents\repos\Advanced-Programming\build\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">src.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">src</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;FREEGLUT_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -120,8 +120,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/computing/Desktop/Advanced-Programming/build/Debug/src.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/computing/Desktop/Advanced-Programming/build/Debug/src.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Libraries/Documents/repos/Advanced-Programming/build/Debug/src.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Libraries/Documents/repos/Advanced-Programming/build/Debug/src.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -148,10 +148,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEGLUT_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -164,8 +164,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/computing/Desktop/Advanced-Programming/build/Release/src.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/computing/Desktop/Advanced-Programming/build/Release/src.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Libraries/Documents/repos/Advanced-Programming/build/Release/src.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Libraries/Documents/repos/Advanced-Programming/build/Release/src.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -174,7 +174,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -192,10 +192,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEGLUT_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,8 +208,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/computing/Desktop/Advanced-Programming/build/MinSizeRel/src.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/computing/Desktop/Advanced-Programming/build/MinSizeRel/src.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Libraries/Documents/repos/Advanced-Programming/build/MinSizeRel/src.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Libraries/Documents/repos/Advanced-Programming/build/MinSizeRel/src.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -218,7 +218,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -235,10 +235,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FREEGLUT_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -251,8 +251,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/computing/Desktop/Advanced-Programming/build/RelWithDebInfo/src.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/computing/Desktop/Advanced-Programming/build/RelWithDebInfo/src.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Libraries/Documents/repos/Advanced-Programming/build/RelWithDebInfo/src.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Libraries/Documents/repos/Advanced-Programming/build/RelWithDebInfo/src.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -260,35 +260,37 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\main.cpp" />
-    <None Include="C:\Users\computing\Desktop\Advanced-Programming\src\freeglutd.dll" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\vecmath.h" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Ball.h" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Ball.cpp" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Camera.cpp" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Camera.h" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Cue.cpp" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Cue.h" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\GolfCourse.h" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\GolfCourse.cpp" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Hole.h" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Hole.cpp" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\IGameObject.h" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\IGameObject.cpp" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Side.cpp" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Side.h" />
-    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\TextRenderer.h" />
-    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\TextRenderer.cpp" />
+    <ClCompile Include="..\src\Player.cpp" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp" />
+    <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
+    <ClInclude Include="..\src\Player.h" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\vecmath.h" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.h" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.cpp" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.cpp" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.h" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.cpp" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.h" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.h" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.cpp" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Hole.h" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Hole.cpp" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\IGameObject.h" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\IGameObject.cpp" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Side.cpp" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Side.h" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\TextRenderer.h" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\TextRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\computing\Desktop\Advanced-Programming\build\external\freeglut-3.2.1\freeglut.vcxproj">
-      <Project>{45ED35AE-63DD-3B7C-9EAE-A44BD4AA915F}</Project>
+    <ProjectReference Include="D:\Libraries\Documents\repos\Advanced-Programming\build\external\freeglut-3.2.1\freeglut.vcxproj">
+      <Project>{CAE5E1DD-2F49-30FA-AF04-3F6A654F9C5A}</Project>
       <Name>freeglut</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\computing\Desktop\Advanced-Programming\build\external\freeglut-3.2.1\freeglut_static.vcxproj">
-      <Project>{B128589B-9EB9-3967-B69B-4DECAADA75D2}</Project>
+    <ProjectReference Include="D:\Libraries\Documents\repos\Advanced-Programming\build\external\freeglut-3.2.1\freeglut_static.vcxproj">
+      <Project>{06BFE010-160D-36C1-A6F6-336C6241AB67}</Project>
       <Name>freeglut_static</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

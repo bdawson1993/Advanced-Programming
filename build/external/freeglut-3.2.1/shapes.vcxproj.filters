@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\progs\demos\shapes\shapes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\progs\demos\shapes\glmatrix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\progs\demos\shapes\glmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E4596F3E-3C2D-3CCD-B426-4573EFCFE0D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BFE3EF4C-FAB0-39FE-B7DB-0846330C4FF6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

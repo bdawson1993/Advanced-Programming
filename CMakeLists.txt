@@ -50,4 +50,5 @@ add_executable( ${SRC}
 )
 
 TARGET_LINK_LIBRARIES(${SRC} freeglut freeglut_static)
+cd copy 
 
