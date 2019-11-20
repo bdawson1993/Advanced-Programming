@@ -3,7 +3,7 @@
 Camera::Camera()
 {
 	//init base values
-	position = vec3(0.0, 0.7, 2.1);
+	position = vec3(0.0, 0.7, -3.1);
 	lookingAt = vec3(0.0, 0.0, 0.0);
 	speed = 1.0f;
 }
