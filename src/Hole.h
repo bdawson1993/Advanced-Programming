@@ -6,6 +6,7 @@ class Hole : public IGameObject
 
 public:
 	Hole(vec2 pos);
+	Hole();//default
 	~Hole();
 
 	// Inherited via IGameObject

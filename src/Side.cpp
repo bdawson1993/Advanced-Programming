@@ -5,6 +5,8 @@ void Side::CalculateCentre()
 	centre = vertice[0];
 	centre += vertice[1];
 	centre /= 2.0;
+
+	cout << centre(0) << ":" << centre(1) << endl;
 }
 
 void Side::CalculateNormal()

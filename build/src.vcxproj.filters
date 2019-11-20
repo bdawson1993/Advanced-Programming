@@ -31,6 +31,9 @@
     <ClCompile Include="..\src\Player.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\GameController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\vecmath.h">
@@ -62,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\IGameObject.h">
       <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GameController.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

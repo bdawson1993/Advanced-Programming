@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "Side.h"
+#include "Hole.h"
 
 using namespace std;
 
@@ -12,7 +13,7 @@ class GolfCourse : public IGameObject
 {
 public:
 
-	GolfCourse();
+	GolfCourse(vec2 pos);
 	~GolfCourse();
 
 	vector<Side> Corners();
@@ -31,10 +32,14 @@ public:
 	virtual void RenderText() override;
 
 	virtual void SpecialInput(char key) override;
+	void AddCorner(vec2 i, vec2 y);
+
+	Hole CourseHole();
 
 private:
 	vector<Side> corners;
-	void AddCorner(vec2 i, vec2 y);
+	Hole* hole;
+	
 	
 
 
