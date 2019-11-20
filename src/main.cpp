@@ -175,12 +175,6 @@ void UpdateScene(int ms)
 	ball->Update(ms);
 	cue->SetBallPosition(ball->Position());
 	cue->Update(ms);
-
-
-
-
-	
-
 	glutTimerFunc(10, UpdateScene, 10);
 	glutPostRedisplay();
 }
