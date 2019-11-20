@@ -75,6 +75,11 @@ void Ball::Draw()
 
 void Ball::Input(char key)
 {
+	if (key == ' ')
+	{
+		hitCount++;
+	}
+
 }
 
 void Ball::HasCollided(string name, vec2 collide)
@@ -93,5 +98,6 @@ void Ball::HasCollided(string name, vec2 collide)
 
 void Ball::RenderText()
 {
-	text.RenderText("Hello world", 10, 10);
+	string amount = to_string(hitCount);
+	text.RenderText("Hit Count: " + amount, 10, 10);
 }

@@ -29,8 +29,8 @@ void TextRenderer::RenderText(string text, int x, int y)
 		glLoadIdentity();
 		glRasterPos2f(x, y);
 		glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
-		const unsigned char* t = reinterpret_cast<const unsigned char*>("text to render");
-		glutBitmapString(GLUT_BITMAP_HELVETICA_18, t);
+		const unsigned char* t = reinterpret_cast<const unsigned char*>(text.c_str());
+		glutBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, t);
 	glPopMatrix();
 
 	//reset projection mode

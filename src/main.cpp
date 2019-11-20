@@ -100,6 +100,7 @@ void RenderScene(void)
 void SpecKeyboardFunc(int key, int x, int y)
 {
 	cue->Input(key);
+	
 }
 
 void SpecKeyboardUpFunc(int key, int x, int y)
@@ -113,6 +114,7 @@ void KeyboardFunc(unsigned char key, int x, int y)
 	cam.Update(key, time);
 	
 
+	ball->Input(key);
 	if (key == ' ')
 	{
 		ball->ApplyForce(cue->Force());

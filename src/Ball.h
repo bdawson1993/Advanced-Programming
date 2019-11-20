@@ -7,6 +7,7 @@ using namespace std;
 class Ball : public IGameObject
 {
 private:
+	int hitCount = 0;
 	float radius = 0.05f;
 	vec2 velocity = vec2(0);
 

@@ -57,6 +57,14 @@ void Cue::Input(char key)
 	case(GLUT_KEY_RIGHT):
 		angle += ((2.0f * time) / 1000);
 		break;
+
+	case(GLUT_KEY_UP):
+		power+= 0.01;
+		break;
+
+	case(GLUT_KEY_DOWN):
+		power-= 0.01;
+		break;
 	}
 }
 

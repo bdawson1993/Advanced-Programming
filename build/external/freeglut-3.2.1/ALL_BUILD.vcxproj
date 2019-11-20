@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{63F54301-226B-36C5-9624-9F96FB82F935}</ProjectGuid>
+    <ProjectGuid>{809F50A4-CB2F-3DEA-B5DA-9587FCEB2CE8}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src;D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;D:\Libraries\Documents\repos\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src;C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;C:\Users\computing\Desktop\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src;D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;D:\Libraries\Documents\repos\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src;C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;C:\Users\computing\Desktop\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -86,7 +86,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src;D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;D:\Libraries\Documents\repos\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src;C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;C:\Users\computing\Desktop\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -96,7 +96,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\src;D:\Libraries\Documents\repos\Advanced-Programming\external\freeglut-3.2.1\include;D:\Libraries\Documents\repos\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\src;C:\Users\computing\Desktop\Advanced-Programming\external\freeglut-3.2.1\include;C:\Users\computing\Desktop\Advanced-Programming\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -107,14 +107,14 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Libraries\Documents\repos\Advanced-Programming\build\external\freeglut-3.2.1\freeglut.vcxproj">
-      <Project>{CAE5E1DD-2F49-30FA-AF04-3F6A654F9C5A}</Project>
+    <ProjectReference Include="C:\Users\computing\Desktop\Advanced-Programming\build\external\freeglut-3.2.1\freeglut.vcxproj">
+      <Project>{45ED35AE-63DD-3B7C-9EAE-A44BD4AA915F}</Project>
       <Name>freeglut</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Libraries\Documents\repos\Advanced-Programming\build\external\freeglut-3.2.1\freeglut_static.vcxproj">
-      <Project>{06BFE010-160D-36C1-A6F6-336C6241AB67}</Project>
+    <ProjectReference Include="C:\Users\computing\Desktop\Advanced-Programming\build\external\freeglut-3.2.1\freeglut_static.vcxproj">
+      <Project>{B128589B-9EB9-3967-B69B-4DECAADA75D2}</Project>
       <Name>freeglut_static</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

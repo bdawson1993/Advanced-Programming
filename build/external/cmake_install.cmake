@@ -1,4 +1,4 @@
-# Install script for directory: D:/Libraries/Documents/repos/Advanced-Programming/external
+# Install script for directory: C:/Users/computing/Desktop/Advanced-Programming/external
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/cmake_install.cmake")
+  include("C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/cmake_install.cmake")
 
 endif()
 

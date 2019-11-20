@@ -16,7 +16,7 @@ void Hole::Start()
 void Hole::Draw()
 {
 	glTranslatef(posistion(0), (radius / 2.0), posistion(1));
-	glutSolidSphere(radius, 32, 32);
+	glutWireSphere(radius, 32, 32);
 	//glutSolidCube(0.1);
 	glColor3f(0, 0, 1.0);
 }

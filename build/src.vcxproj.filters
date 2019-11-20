@@ -1,76 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp">
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Camera.cpp">
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Ball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Side.cpp">
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Hole.cpp" />
-    <ClCompile Include="..\src\TextRenderer.cpp" />
-    <ClCompile Include="..\src\Ball.cpp">
-      <Filter>Source Files\Game Objects</Filter>
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Cue.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\GolfCourse.cpp">
-      <Filter>Source Files\Game Objects</Filter>
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\GolfCourse.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\IGameObject.cpp">
-      <Filter>Source Files\Game Objects</Filter>
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Hole.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Cue.cpp">
-      <Filter>Source Files\Game Objects</Filter>
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\IGameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\Side.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\computing\Desktop\Advanced-Programming\src\TextRenderer.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\vecmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Cue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\GolfCourse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Hole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\IGameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\Side.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\computing\Desktop\Advanced-Programming\src\TextRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="C:\Users\computing\Desktop\Advanced-Programming\src\freeglutd.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{156D12C2-776B-3CA3-9661-9CF80A827A94}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{BFE3EF4C-FAB0-39FE-B7DB-0846330C4FF6}</UniqueIdentifier>
-      <Extensions>.cpp</Extensions>
+      <UniqueIdentifier>{F12A65C7-7874-3D05-A630-859CF940D780}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headers">
-      <UniqueIdentifier>{6be544e1-43bf-47b7-9f7d-15fe4b6088f8}</UniqueIdentifier>
-      <Extensions>.h</Extensions>
-    </Filter>
-    <Filter Include="Headers\Game Objects">
-      <UniqueIdentifier>{d71ae77f-4910-47e9-a089-decb9a9fab9f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Game Objects">
-      <UniqueIdentifier>{002fbe0f-0f64-407d-a3bf-35b1b6414736}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\src\Camera.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Side.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\vecmath.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\TextRenderer.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Ball.h">
-      <Filter>Headers\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Cue.h">
-      <Filter>Headers\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\GolfCourse.h">
-      <Filter>Headers\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Hole.h">
-      <Filter>Headers\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\IGameObject.h">
-      <Filter>Headers\Game Objects</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

@@ -59,57 +59,57 @@ set_target_properties(FreeGLUT::freeglut_static PROPERTIES
 # Import target "FreeGLUT::freeglut" for configuration "Debug"
 set_property(TARGET FreeGLUT::freeglut APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(FreeGLUT::freeglut PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/Debug/freeglutd.lib"
-  IMPORTED_LOCATION_DEBUG "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/bin/Debug/freeglutd.dll"
+  IMPORTED_IMPLIB_DEBUG "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/Debug/freeglutd.lib"
+  IMPORTED_LOCATION_DEBUG "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/bin/Debug/freeglutd.dll"
   )
 
 # Import target "FreeGLUT::freeglut_static" for configuration "Debug"
 set_property(TARGET FreeGLUT::freeglut_static APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(FreeGLUT::freeglut_static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C;RC"
-  IMPORTED_LOCATION_DEBUG "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/Debug/freeglut_staticd.lib"
+  IMPORTED_LOCATION_DEBUG "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/Debug/freeglut_staticd.lib"
   )
 
 # Import target "FreeGLUT::freeglut" for configuration "Release"
 set_property(TARGET FreeGLUT::freeglut APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(FreeGLUT::freeglut PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/Release/freeglut.lib"
-  IMPORTED_LOCATION_RELEASE "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/bin/Release/freeglut.dll"
+  IMPORTED_IMPLIB_RELEASE "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/Release/freeglut.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/bin/Release/freeglut.dll"
   )
 
 # Import target "FreeGLUT::freeglut_static" for configuration "Release"
 set_property(TARGET FreeGLUT::freeglut_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(FreeGLUT::freeglut_static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C;RC"
-  IMPORTED_LOCATION_RELEASE "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/Release/freeglut_static.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/Release/freeglut_static.lib"
   )
 
 # Import target "FreeGLUT::freeglut" for configuration "MinSizeRel"
 set_property(TARGET FreeGLUT::freeglut APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(FreeGLUT::freeglut PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/MinSizeRel/freeglut.lib"
-  IMPORTED_LOCATION_MINSIZEREL "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/bin/MinSizeRel/freeglut.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/MinSizeRel/freeglut.lib"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/bin/MinSizeRel/freeglut.dll"
   )
 
 # Import target "FreeGLUT::freeglut_static" for configuration "MinSizeRel"
 set_property(TARGET FreeGLUT::freeglut_static APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(FreeGLUT::freeglut_static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "C;RC"
-  IMPORTED_LOCATION_MINSIZEREL "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/MinSizeRel/freeglut_static.lib"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/MinSizeRel/freeglut_static.lib"
   )
 
 # Import target "FreeGLUT::freeglut" for configuration "RelWithDebInfo"
 set_property(TARGET FreeGLUT::freeglut APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(FreeGLUT::freeglut PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/RelWithDebInfo/freeglut.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/bin/RelWithDebInfo/freeglut.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/RelWithDebInfo/freeglut.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/bin/RelWithDebInfo/freeglut.dll"
   )
 
 # Import target "FreeGLUT::freeglut_static" for configuration "RelWithDebInfo"
 set_property(TARGET FreeGLUT::freeglut_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(FreeGLUT::freeglut_static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "C;RC"
-  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Libraries/Documents/repos/Advanced-Programming/build/external/freeglut-3.2.1/lib/RelWithDebInfo/freeglut_static.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/computing/Desktop/Advanced-Programming/build/external/freeglut-3.2.1/lib/RelWithDebInfo/freeglut_static.lib"
   )
 
 # This file does not depend on other imported targets which have

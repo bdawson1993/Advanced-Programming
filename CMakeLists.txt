@@ -31,6 +31,22 @@ add_executable( ${SRC}
 	${SRC}/main.cpp
 	${SRC}/freeglutd.dll
 	${SRC}/vecmath.h
+	${SRC}/Ball.h
+	${SRC}/Ball.cpp
+	${SRC}/Camera.cpp
+	${SRC}/Camera.h
+	${SRC}/Cue.cpp
+	${SRC}/Cue.h
+	${SRC}/GolfCourse.h
+	${SRC}/GolfCourse.cpp
+	${SRC}/Hole.h
+	${SRC}/Hole.cpp
+	${SRC}/IGameObject.h
+	${SRC}/IGameObject.cpp
+	${SRC}/Side.cpp
+	${SRC}/Side.h
+	${SRC}/TextRenderer.h
+	${SRC}/TextRenderer.cpp
 )
 
 TARGET_LINK_LIBRARIES(${SRC} freeglut freeglut_static)
