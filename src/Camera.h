@@ -9,6 +9,7 @@ class Camera
 	vec3 lookingAt;
 	float rotSpeed;
 	float speed;
+	bool rotate = false;
 
 public:
 	Camera();

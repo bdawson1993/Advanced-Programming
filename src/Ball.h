@@ -7,14 +7,13 @@ using namespace std;
 class Ball : public IGameObject
 {
 private:
-	int hitCount = 0;
 	float radius = 0.05f;
 	vec2 velocity = vec2(0);
 
 	void ApplyFrictionForce(int ms);
 
 public:
-	Ball();
+	Ball(int pos);
 	~Ball();
 
 	vec2 Velocity();
@@ -34,6 +33,8 @@ public:
 	virtual void HasCollided(string name, vec2 collide) override;
 
 	virtual void RenderText() override;
+
+	virtual void SpecialInput(char key) override;
 
 };
 

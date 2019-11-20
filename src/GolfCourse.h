@@ -30,6 +30,8 @@ public:
 
 	virtual void RenderText() override;
 
+	virtual void SpecialInput(char key) override;
+
 private:
 	vector<Side> corners;
 	void AddCorner(vec2 i, vec2 y);

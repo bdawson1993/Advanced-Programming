@@ -16,11 +16,13 @@ public:
 	virtual void HasCollided(string name, vec2 collide) override;
 	virtual void RenderText() override;
 	virtual void Update(int ms) override;
+	virtual void SpecialInput(char key) override;
 	Ball PlayerBall();
 
 private:
 	Ball* ball;
 	Cue* cue;
+	int hitCount = 0;
 
 	
 };

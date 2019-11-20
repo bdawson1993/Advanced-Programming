@@ -1,4 +1,5 @@
 #include "Cue.h"
+#include <iostream>
 
 Cue::Cue() : IGameObject()
 {
@@ -48,6 +49,21 @@ void Cue::Draw()
 
 void Cue::Input(char key)
 {
+	
+}
+
+
+
+void Cue::HasCollided(string name, vec2 collide)
+{
+}
+
+void Cue::RenderText()
+{
+}
+
+void Cue::SpecialInput(char key)
+{
 	switch (key)
 	{
 	case(GLUT_KEY_LEFT):
@@ -59,19 +75,11 @@ void Cue::Input(char key)
 		break;
 
 	case(GLUT_KEY_UP):
-		power+= 0.01;
+		power += 0.01;
 		break;
 
 	case(GLUT_KEY_DOWN):
-		power-= 0.01;
+		power -= 0.01;
 		break;
 	}
-}
-
-void Cue::HasCollided(string name, vec2 collide)
-{
-}
-
-void Cue::RenderText()
-{
 }

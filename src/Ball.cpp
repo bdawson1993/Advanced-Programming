@@ -21,9 +21,9 @@ void Ball::ApplyFrictionForce(int ms)
 	}
 }
 
-Ball::Ball() : IGameObject()
+Ball::Ball(int pos) : IGameObject()
 {
-	posistion(1) = -1.9;
+	posistion(1) = pos;
 }
 
 Ball::~Ball()
@@ -75,19 +75,11 @@ void Ball::Draw()
 
 void Ball::Input(char key)
 {
-	if (key == ' ')
-	{
-		hitCount++;
-		
-	}
-
+	
 }
 
 void Ball::HasCollided(string name, vec2 collide)
 {
-	cout << name << endl;
-	
-
 	if (name == "SIDE")
 	{
 		double comp = velocity.Dot(collide) * (1.0 + 0.5f);
@@ -95,10 +87,18 @@ void Ball::HasCollided(string name, vec2 collide)
 		velocity += delta;
 	}
 
+	if (name == "HOLE")
+	{
+		cout << "Potted Ball" << endl;
+	}
+
 }
 
 void Ball::RenderText()
 {
-	string amount = to_string(hitCount);
-	text.RenderText("Hit Count: " + amount, 10, 10);
+	
+}
+
+void Ball::SpecialInput(char key)
+{
 }

@@ -31,6 +31,8 @@ public:
 
 	virtual void RenderText() override;
 
+	virtual void SpecialInput(char key) override;
+
 };
 
 

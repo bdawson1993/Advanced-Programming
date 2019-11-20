@@ -14,6 +14,7 @@ public:
 	virtual void Input(char key) override;
 	virtual void HasCollided(string name, vec2 collide) override;
 	virtual void RenderText() override;
+	virtual void SpecialInput(char key) override;
 
 private:
 	float radius = 0.05f;

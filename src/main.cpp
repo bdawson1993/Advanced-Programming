@@ -41,6 +41,8 @@ void RenderScene(void)
 		player->Draw();
 	glPopMatrix();
 	
+	player->RenderText();
+
 	//swap buffers
 	glFlush();
 	glutSwapBuffers();
@@ -77,7 +79,8 @@ void RenderScene(void)
 	vec2 relPosNorm = relPosn.Normalise();
 	vec2 relVelocity = player->PlayerBall().Velocity() - 0;
 
-	if (relVelocity.Dot(relPosNorm) <= 0.0)
+	
+	if (relVelocity.Dot(relPosNorm) >= 0.0)
 	{
 		if (dist < (player->PlayerBall().Radius() + player->PlayerBall().Radius())) //ball and hold has same radius
 		{
@@ -91,7 +94,7 @@ void RenderScene(void)
 
 void SpecKeyboardFunc(int key, int x, int y)
 {
-	player->Input(key);
+	player->SpecialInput(key);
 	
 }
 

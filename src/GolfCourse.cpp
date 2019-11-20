@@ -68,3 +68,7 @@ void GolfCourse::HasCollided(string name, vec2 collide)
 void GolfCourse::RenderText()
 {
 }
+
+void GolfCourse::SpecialInput(char key)
+{
+}

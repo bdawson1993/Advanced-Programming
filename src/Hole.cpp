@@ -32,3 +32,7 @@ void Hole::HasCollided(string name, vec2 collide)
 void Hole::RenderText()
 {
 }
+
+void Hole::SpecialInput(char key)
+{
+}
