@@ -31,60 +31,9 @@ void RenderScene(void)
 	glFlush();
 	glutSwapBuffers();
 
-
-	//collision checks -- with side
-	vector<Side> sides = controller->GetCourse(1).Corners();
-	Player player = controller->GetPlayer(0);
-	for (int i = 0; i != sides.size(); i++)
-	{
-		
-		//cout << ball->Velocity().Dot(sides[i].normal);
-		
-		if (player.PlayerBall().Velocity().Dot(sides[i].normal) >= 0.0)
-		{
-			continue; //cannot have hit check next side
-		}
-
-		vec2 relPos = player.PlayerBall().Position() - sides[i].vertice[0];
-		double sep = relPos.Dot(sides[i].normal);
-
-		//cout << sep << endl;
-		if (sep > player.PlayerBall().Radius())
-		{
-			continue;
-		}
-
-		cout << sep << endl;
-		relPos = player.PlayerBall().Position() - sides[i].vertice[1];
-		sep = relPos.Dot(sides[i].centre);
-
-		//cout << sep << endl;
-		if (sep > player.PlayerBall().Radius())
-		{
-			continue;
-		}
-
-		controller->GetPlayer(0).HasCollided("SIDE", sides[i].normal);
-
-	}
-
-	//collision check with hole
-	
-	vec2 relPosn = player.PlayerBall().Position() - controller->GetCourse(1).CourseHole().Position();
-	float dist = (float)relPosn.Magnitude();
-	vec2 relPosNorm = relPosn.Normalise();
-	vec2 relVelocity = player.PlayerBall().Velocity() - 0;
-	
+	controller->CollisionChecks();
 
 	
-	if (relVelocity.Dot(relPosNorm) >= 0.0)
-	{
-		if (dist < (player.PlayerBall().Radius() + player.PlayerBall().Radius())) //ball and hold has same radius
-		{
-			controller->GetPlayer(0).HasCollided("HOLE", vec2(0, 0));
-		}
-	}
-
 
 
 }
@@ -156,6 +105,9 @@ void UpdateScene(int ms)
 {
 	time = ms;
 	controller->Update(ms);
+	
+
+
 	glutTimerFunc(10, UpdateScene, 10);
 	glutPostRedisplay();
 }

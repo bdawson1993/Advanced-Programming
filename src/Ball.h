@@ -9,10 +9,12 @@ class Ball : public IGameObject
 private:
 	float radius = 0.05f;
 	vec2 velocity = vec2(0);
-
+	vec2 startingPosition;
 	void ApplyFrictionForce(int ms);
 
 public:
+	vec2 collsionBox[4];
+
 	Ball(int pos);
 	~Ball();
 

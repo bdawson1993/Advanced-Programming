@@ -5,7 +5,7 @@ class Cue : public IGameObject
 {
 private:
 	vec2 ballPosition;
-	float power = 0.25;
+	float power = -0.25;
 	float angle = 0.0;
 	//float force;
 	

@@ -24,6 +24,8 @@ void Ball::ApplyFrictionForce(int ms)
 Ball::Ball(int pos) : IGameObject()
 {
 	posistion(1) = pos;
+	startingPosition = posistion;
+	
 }
 
 Ball::~Ball()
@@ -63,6 +65,21 @@ void Ball::Update(int ms)
 		velocity = 0.0f;
 	}
 
+	//top left
+	collsionBox[0](0) = posistion(0) + -0.005;
+	collsionBox[0](1) = posistion(1) + 0.005;
+
+	//top right
+	collsionBox[1](0) = posistion(0) + 0.05;
+	collsionBox[1](1) = posistion(1) + 0.005;
+
+	//bottom left
+	collsionBox[2](0) = posistion(0) + -0.005;
+	collsionBox[2](1) = posistion(0) + -0.005;
+
+	//bottom right
+	collsionBox[3](0) = posistion(0) + 0.005;
+	collsionBox[3](1) = posistion(0) + -0.005;
 }
 
 void Ball::Draw()
@@ -71,6 +88,7 @@ void Ball::Draw()
 		glutWireSphere(radius, 32, 32);
 	//glutSolidCube(0.1);
 	glColor3f(0, 0, 1.0);
+
 }
 
 void Ball::Input(char key)
@@ -90,6 +108,8 @@ void Ball::HasCollided(string name, vec2 collide)
 	if (name == "HOLE")
 	{
 		cout << "Potted Ball" << endl;
+		posistion = startingPosition;
+		velocity = 0.0;
 	}
 
 }

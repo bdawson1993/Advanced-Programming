@@ -16,7 +16,7 @@ public:
 	GolfCourse(vec2 pos);
 	~GolfCourse();
 
-	vector<Side> Corners();
+	vector<Side>* Corners();
 
 	// Inherited via IGameObject
 	virtual void Start() override;
