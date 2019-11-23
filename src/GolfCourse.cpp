@@ -16,7 +16,6 @@ vector<Side>* GolfCourse::Corners()
 
 void GolfCourse::Start()
 {
-
 	AddCorner(vec2(-0.6f, -2.2f), vec2(-0.6f, 2.2f));
 
 	AddCorner(vec2(-0.6f, 2.2f), vec2(0.6f, 2.2f));

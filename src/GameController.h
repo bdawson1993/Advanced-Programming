@@ -21,7 +21,7 @@ public:
 	void CollisionChecks();
 
 private:
-	int currentCourse = 1;
+	int currentCourse = 0;
 	vector<Player*> players;
 	vector<GolfCourse*> loadedCourses;
 

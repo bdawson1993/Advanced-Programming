@@ -3,7 +3,7 @@
 GameController::GameController()
 {
 	//the default first course
-	GolfCourse* course = new GolfCourse(0);
+	GolfCourse* course = new GolfCourse(vec2(0, 1.3));
 	course->Start();
 	loadedCourses.push_back(course);
 
