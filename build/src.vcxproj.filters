@@ -34,6 +34,7 @@
     <ClCompile Include="..\src\GameController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\vecmath.h">
@@ -67,6 +68,9 @@
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\GameController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Network.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -261,10 +261,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\GameController.cpp" />
+    <ClCompile Include="..\src\Network.cpp" />
     <ClCompile Include="..\src\Player.cpp" />
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp" />
     <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
     <ClInclude Include="..\src\GameController.h" />
+    <ClInclude Include="..\src\Network.h" />
     <ClInclude Include="..\src\Player.h" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\vecmath.h" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.h" />

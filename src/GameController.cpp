@@ -45,6 +45,7 @@ void GameController::Update(int ms)
 {
 	players[0]->Update(ms);
 	loadedCourses[1]->Update(ms);
+	network.SendData(to_string(players[0]->PlayerBall().Position()(0)) + ':' + to_string(players[0]->PlayerBall().Position()(1)));
 }
 
 void GameController::Input(char key)
@@ -101,24 +102,18 @@ void GameController::CollisionChecks()
 		vec2 relPosL = player.PlayerBall().Position() - sides[i].vertice[0];
 		float sep = relPosL.Dot(sides[i].normal);
 
-		
-		
 		if (sep > player.PlayerBall().Radius())
 		{
 			continue;
 		}
 
-		/*if (ballPos >= sides[i].topLeft || ballPos <= sides[i].topRight)
-		{
-			continue;
-		}*/
-
-		if (ballPos(0) > sides[i].topLeft(0) && (ballPos(0) < sides[i].topRight(0)))
+		
+		if (ballPos(0) > sides[i].topLeft(0) && (ballPos(0) > sides[i].topRight(0)))
 		{
 			continue;
 		}
 
-		if (ballPos(1) > sides[i].topLeft(1) && (ballPos(1) < sides[i].topRight(1)))
+		if (ballPos(1) > sides[i].topLeft(1) && (ballPos(1) > sides[i].topRight(1)))
 		{
 			continue;
 		}

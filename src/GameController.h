@@ -2,6 +2,7 @@
 #include "GolfCourse.h"
 #include "Hole.h"
 #include "Player.h"
+#include "Network.h"
 #include <vector>
 
 class GameController
@@ -24,6 +25,7 @@ private:
 	int currentCourse = 0;
 	vector<Player*> players;
 	vector<GolfCourse*> loadedCourses;
+	Network network;
 
 
 
