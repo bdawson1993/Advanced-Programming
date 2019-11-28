@@ -18,12 +18,14 @@
 #define DEFAULT_BUFLEN 512
 #define DEFAULT_PORT "27015"
 
+using namespace std;
+
 class Network
 {
 public:
 	Network();
 	~Network();
-	void SendData(std::string data);
+	string SendData(std::string data);
 
 private:
 	WSADATA wsaData;

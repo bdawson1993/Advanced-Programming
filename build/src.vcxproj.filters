@@ -4,7 +4,22 @@
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Hole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\IGameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Side.cpp">
@@ -13,34 +28,36 @@
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\TextRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\IGameObject.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Hole.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Player.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\GameController.cpp">
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GameController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Network.cpp" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Network.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\vecmath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Hole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\IGameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Side.h">
@@ -49,28 +66,13 @@
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\TextRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Player.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Hole.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\IGameObject.h">
-      <Filter>Header Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\GameController.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GameController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Network.h">
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Network.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,12 +85,6 @@
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{BFE3EF4C-FAB0-39FE-B7DB-0846330C4FF6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\GameObjects">
-      <UniqueIdentifier>{60da67ed-a6e5-4b6a-8c82-7fb93eebec6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\GameObjects">
-      <UniqueIdentifier>{c4a8678d-040c-4070-a79b-d617f598d038}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

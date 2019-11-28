@@ -56,9 +56,7 @@ Network::Network()
 		WSACleanup();
 		return 1;
 	}
-
 	printf("***Bytes Sent: %ld\n", iResult);
-
 	// shutdown the connection since no more data will be sent
 	iResult = shutdown(ConnectSocket, SD_SEND);
 	if (iResult == SOCKET_ERROR) {
@@ -70,7 +68,6 @@ Network::Network()
 
 	/*// Receive until the peer closes the connection
 	do {
-
 		iResult = recv(ConnectSocket, recvbuf, recvbuflen, 0);
 		if (iResult > 0)
 			printf("Bytes received: %d\n", iResult);
@@ -78,7 +75,6 @@ Network::Network()
 			printf("Connection closed\n");
 		else
 			printf("recv failed with error: %d\n", WSAGetLastError());
-
 	} while (iResult > 0);*/
 
 	std::cout << "STILL Connected!" << std::endl;
@@ -94,9 +90,13 @@ Network::~Network()
 	WSACleanup();
 }
 
-void Network::SendData(std::string data)
+string Network::SendData(std::string data)
 {
-	iResult = send(ConnectSocket, data.c_str(), sizeof(data.c_str()), 0);
+
+	//cout << sizeof(data) / 8;
+
+
+	iResult = send(ConnectSocket, data.c_str(), sizeof(data) + 20, 0);
 	if (iResult == SOCKET_ERROR) {
 		printf("send failed with error: %d\n", WSAGetLastError());
 		closesocket(ConnectSocket);
@@ -107,9 +107,14 @@ void Network::SendData(std::string data)
 	//n = read(sockfd, buffer, 255);
 	//if (n < 0) msg("ERROR reading from socket");
 	//printf("%s\n", buffer);
+
 	iResult = recv(ConnectSocket, recvbuf, recvbuflen, 0);
 	if (iResult > 0)
-		printf("Server says: %s\n", recvbuf);
-	//printf("Bytes received: %d\n", iResult);
+	{
+		//printf(recvbuf); cout << endl;
+	}
 
+	return recvbuf;
 }
+
+

@@ -47,8 +47,20 @@ add_executable( ${SRC}
 	${SRC}/Side.h
 	${SRC}/TextRenderer.h
 	${SRC}/TextRenderer.cpp
+	${SRC}/GameController.h
+	${SRC}/GameController.cpp
+	${SRC}/Network.cpp
+	${SRC}/Network.h
+
+	
 )
 
+set(SRC server)
+add_executable(server
+	${SRC}/main.cpp
+)
+
+set(SRC src)
 TARGET_LINK_LIBRARIES(${SRC} freeglut freeglut_static)
-cd copy 
+
 

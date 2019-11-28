@@ -43,9 +43,19 @@ void GameController::Start()
 
 void GameController::Update(int ms)
 {
+	string output;
 	players[0]->Update(ms);
 	loadedCourses[1]->Update(ms);
-	network.SendData(to_string(players[0]->PlayerBall().Position()(0)) + ':' + to_string(players[0]->PlayerBall().Position()(1)));
+
+	dataToSend += "'BallPos': {x{" + to_string(players[0]->PlayerBall().Position()(0)) + "}y{" + to_string(players[0]->PlayerBall().Position()(1)) + "}";
+	dataToSend += "'CurrentCourse':{" + to_string(currentCourse) + "}";
+	 
+	output = network.SendData(dataToSend);
+	dataToSend = "";
+
+	cout << output << endl;
+
+	
 }
 
 void GameController::Input(char key)

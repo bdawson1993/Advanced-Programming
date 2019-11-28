@@ -119,6 +119,12 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="D:\Libraries\Documents\repos\Advanced-Programming\build\server.vcxproj">
+      <Project>{0C360404-1AC7-36C6-94DA-90F1AF65E799}</Project>
+      <Name>server</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
     <ProjectReference Include="D:\Libraries\Documents\repos\Advanced-Programming\build\src.vcxproj">
       <Project>{95CCFF41-25DA-37B9-93E6-E44937BF478E}</Project>
       <Name>src</Name>

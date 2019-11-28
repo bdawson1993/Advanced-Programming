@@ -1,4 +1,5 @@
 D:/Libraries/Documents/repos/Advanced-Programming/build/CMakeFiles/src.dir
+D:/Libraries/Documents/repos/Advanced-Programming/build/CMakeFiles/server.dir
 D:/Libraries/Documents/repos/Advanced-Programming/build/CMakeFiles/INSTALL.dir
 D:/Libraries/Documents/repos/Advanced-Programming/build/CMakeFiles/ALL_BUILD.dir
 D:/Libraries/Documents/repos/Advanced-Programming/build/external/CMakeFiles/INSTALL.dir

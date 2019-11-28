@@ -260,13 +260,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\GameController.cpp" />
-    <ClCompile Include="..\src\Network.cpp" />
     <ClCompile Include="..\src\Player.cpp" />
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\main.cpp" />
-    <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll" />
-    <ClInclude Include="..\src\GameController.h" />
-    <ClInclude Include="..\src\Network.h" />
+    <None Include="D:\Libraries\Documents\repos\Advanced-Programming\src\freeglutd.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <ClInclude Include="..\src\Player.h" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\vecmath.h" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.h" />
@@ -285,6 +283,10 @@
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Side.h" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\TextRenderer.h" />
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\TextRenderer.cpp" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GameController.h" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GameController.cpp" />
+    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Network.cpp" />
+    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Network.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\Libraries\Documents\repos\Advanced-Programming\build\external\freeglut-3.2.1\freeglut.vcxproj">

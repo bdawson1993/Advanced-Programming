@@ -26,6 +26,7 @@ private:
 	vector<Player*> players;
 	vector<GolfCourse*> loadedCourses;
 	Network network;
+	string dataToSend;
 
 
 
