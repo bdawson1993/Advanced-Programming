@@ -1,6 +1,13 @@
 ﻿#include "Network.h"
 
-Network::Network()
+
+Network::~Network()
+{
+	closesocket(ConnectSocket);
+	WSACleanup();
+}
+
+void Network::Connect()
 {
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -81,14 +88,6 @@ Network::Network()
 
 	string id = SendData("Hello");
 	cout << id << endl;
-
-
-}
-
-Network::~Network()
-{
-	closesocket(ConnectSocket);
-	WSACleanup();
 }
 
 string Network::SendData(std::string data)

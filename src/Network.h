@@ -23,8 +23,9 @@ using namespace std;
 class Network
 {
 public:
-	Network();
+	Network() {};
 	~Network();
+	void Connect();
 	string SendData(std::string data);
 
 private:

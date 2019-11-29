@@ -7,9 +7,8 @@ GameController::GameController(int localPlayers, bool networked)
 	course->Start();
 	loadedCourses.push_back(course);
 
+	//create hole 2
 	GolfCourse* hole2 = new GolfCourse(vec2(1.3f, 2.1f));
-
-	
 	hole2->AddCorner(vec2(-0.6f, -2.6f), vec2(-0.6f, 3.2f));
 	hole2->AddCorner(vec2(-0.6f, 3.2f), vec2(1.8f, 3.2f));
 
@@ -18,18 +17,35 @@ GameController::GameController(int localPlayers, bool networked)
 	
 	hole2->AddCorner(vec2(1.0f, 1.5f), vec2(1.0f, -2.6f));
 	hole2->AddCorner(vec2(1.0f, -2.6f), vec2(-0.6f, -2.6f));
-
-	
-	
-	
 	loadedCourses.push_back(hole2);
-	
+	networkedGame = networked;
 
-	for (int i = 0; i < localPlayers; i++)
+	//keep players less than 5
+	if (localPlayers > 5)
 	{
-		Player* player = new Player();
-		players.push_back(player);
+		localPlayers = 5;
 	}
+
+
+	//create local players
+	if (networked == false)
+	{
+		for (int i = 0; i < localPlayers; i++)
+		{
+			Player* player = new Player();
+			players.push_back(player);
+		}
+	}
+	else
+	{
+		//create players and attempt to connect to server
+		Player* player = new Player();
+		Player* player2 = new Player();
+		players.push_back(player);
+		players.push_back(player2);
+		network.Connect();
+	}
+	
 	
 }
 
@@ -50,38 +66,47 @@ void GameController::Update(int ms)
 	players[currentPlayer]->Update(ms);
 	loadedCourses[currentCourse]->Update(ms);
 
-	//send data to server
-	dataToSend += "'BallPos': {x{" + to_string(players[0]->PlayerBall().Position()(0)) + "}y{" + to_string(players[0]->PlayerBall().Position()(1)) + "}";
-	dataToSend += "'CurrentCourse':{" + to_string(currentCourse) + "}";
 
-	//get response
-	string output;
-	output = network.SendData(dataToSend);
-	dataToSend = "";
+	//build message for networked game
+	if (networkedGame)
+	{
+		//send data to server - player 1 is the local player
+		dataToSend += "'BallPos': {x{" + to_string(players[0]->PlayerBall().Position()(0)) + "}y{" + to_string(players[0]->PlayerBall().Position()(1)) + "}";
+		dataToSend += "'CurrentCourse':{" + to_string(currentCourse) + "}";
 
-	cout << output << endl;
+		//get response
+		string output;
+		output = network.SendData(dataToSend);
+		dataToSend = "";
+
+		cout << output << endl;
+	}
+
+	
 }
 
 void GameController::Input(char key)
 {
-	players[currentPlayer]->Input(key);
-
-	if (key == '+')
-	{
-		vector<Side>* sides = loadedCourses[currentCourse]->Corners();
-		sides->at(0).vertice[0](0) += 0.1;
-	}
+	//handle input of local players
+	if (networkedGame == true)
+		players[0]->Input(key);
+	else //handle local game
+		players[currentPlayer]->Input(key);
 }
 
 void GameController::SpecialInput(char key)
 {
-	players[0]->SpecialInput(key);
+
+	if (networkedGame == true)
+		players[0]->SpecialInput(key);
+	else
+		players[currentPlayer]->Input(key);
 }
 
 void GameController::Render()
 {
 	glPushMatrix();
-		players[0]->Draw();
+		players[currentPlayer]->Draw();
 	glPopMatrix();
 
 	glPushMatrix();
@@ -89,7 +114,7 @@ void GameController::Render()
 	glPopMatrix();
 
 	
-	players[0]->RenderText();
+	players[currentPlayer]->RenderText();
 	
 }
 
@@ -107,9 +132,15 @@ void GameController::CollisionChecks()
 {
 	//collision checks -- with side
 	vector<Side> sides = *loadedCourses[currentCourse]->Corners();
-	Player player = *players[0];
-	vec2 ballPos = player.PlayerBall().Position();
 
+	//pick player based on game type
+	Player player;
+	if (networkedGame)
+		player = *players[0];
+	else
+		player = *players[currentPlayer];
+
+	vec2 ballPos = player.PlayerBall().Position();
 	for (int i = 0; i != sides.size(); i++)
 	{
 		if (player.PlayerBall().Velocity().Dot(sides[i].normal) >= 0.0)
@@ -131,19 +162,21 @@ void GameController::CollisionChecks()
 			continue;
 		}
 
+		//not within range of the vertices cannot of hit
 		if (ballPos(1) > sides[i].topLeft(1) && (ballPos(1) > sides[i].topRight(1)))
 		{
 			continue;
 		}
 
-	
- 		players[0]->HasCollided("SIDE", sides[i].normal);
+		if (networkedGame == true)
+			players[0]->HasCollided("SIDE", sides[i].normal);
+		else
+			players[currentPlayer]->HasCollided("SIDE", sides[i].normal);
 		
 
 	}
 
 	//collision check with hole
-
 	vec2 relPosn = player.PlayerBall().Position() - loadedCourses[currentCourse]->CourseHole().Position();
 	float dist = (float)relPosn.Magnitude();
 	vec2 relPosNorm = relPosn.Normalise();
@@ -155,9 +188,17 @@ void GameController::CollisionChecks()
 	{
 		if (dist < (player.PlayerBall().Radius() + player.PlayerBall().Radius())) //ball and hold has same radius
 		{
-			players[0]->HasCollided("HOLE", vec2(0, 0));
-			
-			if (currentPlayer < players.size() - 1)
+			if ((networkedGame == false) && (currentPlayer != 0)) //prevent checking of network player
+			{
+				players[currentPlayer]->HasCollided("HOLE", vec2(0, 0));
+			}
+			else
+			{
+				players[0]->HasCollided("HOLE", vec2(0, 0));
+			}
+
+			//check if should move to next player or next course
+			if (currentPlayer <= players.size() - 1)
 			{
 				currentPlayer++;
 			}
@@ -166,8 +207,16 @@ void GameController::CollisionChecks()
 				currentPlayer = 0;
 				currentCourse++;
 			}
+			
+
+			
 		}
 	}
 
 
+}
+
+//Parse string sent from server
+void GameController::ParseString()
+{
 }

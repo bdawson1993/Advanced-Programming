@@ -114,6 +114,24 @@ void UpdateScene(int ms)
 
 int main(int argc, char **argv)
 {
+	//intro and pick mode
+	cout << "GOLF GAME " << endl;
+	int isNetworked = 0;
+
+	cout << "Would you like a networked game? 1 - yes, 0 - no" << endl;
+	cin >> isNetworked;
+	if (isNetworked == 1)
+		controller = new GameController(0, true);
+	else
+	{
+		int players;
+		cout << "How Many Players? " << endl;
+		cin >> players;
+		controller = new GameController(players, false);
+	}
+
+
+
 	glutInit(&argc, ((char**)argv));
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(0, 0);
