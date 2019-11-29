@@ -1,6 +1,6 @@
 #include "GameController.h"
 
-GameController::GameController()
+GameController::GameController(int localPlayers, bool networked)
 {
 	//the default first course
 	GolfCourse* course = new GolfCourse(vec2(0, 1.3));
@@ -25,9 +25,12 @@ GameController::GameController()
 	loadedCourses.push_back(hole2);
 	
 
-
-	Player* player = new Player();
-	players.push_back(player);
+	for (int i = 0; i < localPlayers; i++)
+	{
+		Player* player = new Player();
+		players.push_back(player);
+	}
+	
 }
 
 GameController::~GameController()
@@ -43,24 +46,25 @@ void GameController::Start()
 
 void GameController::Update(int ms)
 {
-	string output;
-	players[0]->Update(ms);
-	loadedCourses[1]->Update(ms);
+	//call update
+	players[currentPlayer]->Update(ms);
+	loadedCourses[currentCourse]->Update(ms);
 
+	//send data to server
 	dataToSend += "'BallPos': {x{" + to_string(players[0]->PlayerBall().Position()(0)) + "}y{" + to_string(players[0]->PlayerBall().Position()(1)) + "}";
 	dataToSend += "'CurrentCourse':{" + to_string(currentCourse) + "}";
-	 
+
+	//get response
+	string output;
 	output = network.SendData(dataToSend);
 	dataToSend = "";
 
 	cout << output << endl;
-
-	
 }
 
 void GameController::Input(char key)
 {
-	players[0]->Input(key);
+	players[currentPlayer]->Input(key);
 
 	if (key == '+')
 	{
@@ -83,6 +87,10 @@ void GameController::Render()
 	glPushMatrix();
 		loadedCourses[currentCourse]->Draw();
 	glPopMatrix();
+
+	
+	players[0]->RenderText();
+	
 }
 
 GolfCourse GameController::GetCourse(int index)
@@ -148,7 +156,16 @@ void GameController::CollisionChecks()
 		if (dist < (player.PlayerBall().Radius() + player.PlayerBall().Radius())) //ball and hold has same radius
 		{
 			players[0]->HasCollided("HOLE", vec2(0, 0));
-			currentCourse++;
+			
+			if (currentPlayer < players.size() - 1)
+			{
+				currentPlayer++;
+			}
+			else
+			{
+				currentPlayer = 0;
+				currentCourse++;
+			}
 		}
 	}
 

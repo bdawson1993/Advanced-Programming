@@ -12,6 +12,7 @@ Player::~Player()
 
 void Player::Start()
 {
+	Init();
 	ball->Init();
 }
 

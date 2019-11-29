@@ -79,7 +79,8 @@ Network::Network()
 
 	std::cout << "STILL Connected!" << std::endl;
 
-
+	string id = SendData("Hello");
+	cout << id << endl;
 
 
 }

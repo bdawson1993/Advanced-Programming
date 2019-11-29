@@ -8,7 +8,7 @@
 class GameController
 {
 public:
-	GameController();
+	GameController(int localPlayers, bool networked);
 	~GameController();
 
 	void Start();
@@ -23,6 +23,8 @@ public:
 
 private:
 	int currentCourse = 0;
+	int currentPlayer = 0;
+
 	vector<Player*> players;
 	vector<GolfCourse*> loadedCourses;
 	Network network;

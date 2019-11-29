@@ -262,8 +262,6 @@
   <ItemGroup>
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\server\main.cpp" />
   </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
