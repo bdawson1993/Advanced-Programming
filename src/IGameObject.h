@@ -3,6 +3,7 @@
 #include "vecmath.h"
 #include <GL/glut.h>
 #include "TextRenderer.h"
+#include <iostream>
 
 
 using namespace std;
@@ -28,4 +29,5 @@ public:
 	virtual void HasCollided(string name, vec2 collide) = 0;
 	virtual void RenderText() = 0;
 	vec2 Position();
+	void Position(vec2 pos);
 };

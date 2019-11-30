@@ -13,6 +13,7 @@
 #include <vector>
 #include <thread>
 #include <mutex>
+#include <Windows.h>
 
 using namespace std;
 
@@ -34,16 +35,22 @@ struct addrinfo hints;
 
 int iSendResult;
 char recvbuf[DEFAULT_BUFLEN];
+string player1;
+string player2;
+
 int recvbuflen = DEFAULT_BUFLEN;
 
 
 
 mutex clientLock;
+mutex clientLock2;
 void SendAndRecv(int index)
 {
-	
+
 	iResult = recv(ClientSocket[index], recvbuf, recvbuflen, 0);
 	string message = recvbuf;
+	std::string reply;
+
 	if (iResult > 0) {
 		//printf("Bytes received: %d\n", iResult);
 		printf("Client says: %s\n", recvbuf);
@@ -51,7 +58,7 @@ void SendAndRecv(int index)
 		//send ID to client
 		if (message == "Hello")
 		{
-			std::string reply;
+			reply = "";
 			reply += to_string(ClientSocket.size() - 1);
 			iSendResult = send(ClientSocket[index], reply.c_str(), iResult, 0);
 			if (iSendResult == SOCKET_ERROR) {
@@ -60,31 +67,47 @@ void SendAndRecv(int index)
 				WSACleanup();
 			}
 		}
-		else
+
+
+		//store buffers
+		else if (message.back() == '0') //store player 1 buffer
 		{
-			// Echo the buffer back to the sender
-			std::string reply;
-			reply += recvbuf;
+			player1 = message;
+			reply = "";
+			reply += player2;
 			iSendResult = send(ClientSocket[index], reply.c_str(), iResult, 0);
 			if (iSendResult == SOCKET_ERROR) {
 				printf("send failed with error: %d\n", WSAGetLastError());
 				closesocket(ClientSocket[0]);
 				WSACleanup();
 			}
-			//printf("Bytes sent: %d\n", iSendResult);
+
 		}
 
-		
+		else if (message.back() == '1') //store player 2 buffer
+		{
+			player2 = message;
+			reply = "";
+			reply += player1;
+			iSendResult = send(ClientSocket[index], reply.c_str(), iResult, 0);
+			if (iSendResult == SOCKET_ERROR) {
+				printf("send failed with error: %d\n", WSAGetLastError());
+				closesocket(ClientSocket[0]);
+				WSACleanup();
+			}
+
+		}
+		else if (iResult == 0)
+			printf("Connection closing...\n");
+		else {
+			printf("recv failed with error: %d\n", WSAGetLastError());
+			closesocket(ClientSocket[index]);
+			WSACleanup();
+		}
 	}
-	else if (iResult == 0)
-		printf("Connection closing...\n");
-	else {
-		printf("recv failed with error: %d\n", WSAGetLastError());
-		closesocket(ClientSocket[index]);
-		WSACleanup();
-	}
-	
 }
+	
+
 
 void ListenForConnection()
 {
@@ -171,8 +194,15 @@ void ListenForConnectionT()
 }
 
 
-int __cdecl main(void)
+int main(int argc, const char** argv)
 {
+	if (argc > 1)
+	{
+		HWND consoleWindow = GetConsoleWindow();
+		SetWindowPos(consoleWindow, 0, stoi(argv[1]), stoi(argv[2]), 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+	}
+	
+
 	
 	// No longer need server socket
 	//closesocket(ListenSocket);
@@ -185,13 +215,12 @@ int __cdecl main(void)
 
 	// Receive until the peer shuts down the connection
 	do {
-		clientLock.lock();
-			cout << ClientSocket.size() << endl;
+		clientLock2.lock();
 			for (int i = 0; i < ClientSocket.size(); i++)
 			{
 				SendAndRecv(i);
 			}
-		clientLock.unlock();
+			clientLock2.unlock();
 		
 	} while (iResult > 0);
 

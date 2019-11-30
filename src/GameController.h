@@ -4,6 +4,9 @@
 #include "Player.h"
 #include "Network.h"
 #include <vector>
+#include "Parser.h"
+
+using namespace std;
 
 class GameController
 {
@@ -27,12 +30,14 @@ private:
 	int currentPlayer = 0;
 	bool networkedGame = 0;
 
+	
 	vector<Player*> players;
 	vector<GolfCourse*> loadedCourses;
 	Network network;
 	string dataToSend;
+	Parser parser;
 
-	void ParseString();
+	
 
 
 };

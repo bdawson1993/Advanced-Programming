@@ -44,6 +44,8 @@ GameController::GameController(int localPlayers, bool networked)
 		players.push_back(player);
 		players.push_back(player2);
 		network.Connect();
+		
+		cout << "PlayerID: " + to_string(network.PlayerID()) << endl;
 	}
 	
 	
@@ -56,8 +58,10 @@ GameController::~GameController()
 
 void GameController::Start()
 {
-	players[0]->Start();
-	
+	for (int i = 0; i < players.size(); i++)
+	{
+		players[i]->Start();
+	}
 }
 
 void GameController::Update(int ms)
@@ -71,34 +75,53 @@ void GameController::Update(int ms)
 	if (networkedGame)
 	{
 		//send data to server - player 1 is the local player
-		dataToSend += "'BallPos': {x{" + to_string(players[0]->PlayerBall().Position()(0)) + "}y{" + to_string(players[0]->PlayerBall().Position()(1)) + "}";
-		dataToSend += "'CurrentCourse':{" + to_string(currentCourse) + "}";
+		dataToSend += "BallPos:" + to_string(players[0]->PlayerBall().Position()(0)) + "," + to_string(players[0]->PlayerBall().Position()(1));
+		dataToSend += ":CurrentCourse:" + to_string(currentCourse);
+		dataToSend += ":" + to_string(network.PlayerID());
 
 		//get response
 		string output;
 		output = network.SendData(dataToSend);
 		dataToSend = "";
-
-		cout << output << endl;
+		
+	
+		
+		parser.Parse(output);
+		if (network.OtherID() >= 0)
+		{
+			vector<string> msg = parser.Get("BallPos");
+			//cout << msg[0] << "," << msg[1] << endl;
+			players[network.OtherID()]->PlayerBall().Position(vec2(stof(msg[0]), stof(msg[1])));
+			//cout << to_string(players[network.OtherID()]->PlayerBall().Position()(0)) << "," << to_string(players[network.OtherID()]->PlayerBall().Position()(1)) << endl;
+		}
+		
 	}
+}
+
+
 
 	
-}
+
 
 void GameController::Input(char key)
 {
 	//handle input of local players
 	if (networkedGame == true)
-		players[0]->Input(key);
+		players[network.PlayerID()]->Input(key);
 	else //handle local game
 		players[currentPlayer]->Input(key);
+
+	if (key == '+')
+	{
+		currentPlayer++;
+	}
 }
 
 void GameController::SpecialInput(char key)
 {
 
 	if (networkedGame == true)
-		players[0]->SpecialInput(key);
+		players[network.PlayerID()]->SpecialInput(key);
 	else
 		players[currentPlayer]->Input(key);
 }
@@ -136,7 +159,7 @@ void GameController::CollisionChecks()
 	//pick player based on game type
 	Player player;
 	if (networkedGame)
-		player = *players[0];
+		player = *players[network.PlayerID()];
 	else
 		player = *players[currentPlayer];
 
@@ -169,7 +192,7 @@ void GameController::CollisionChecks()
 		}
 
 		if (networkedGame == true)
-			players[0]->HasCollided("SIDE", sides[i].normal);
+			players[network.PlayerID()]->HasCollided("SIDE", sides[i].normal);
 		else
 			players[currentPlayer]->HasCollided("SIDE", sides[i].normal);
 		
@@ -207,16 +230,9 @@ void GameController::CollisionChecks()
 				currentPlayer = 0;
 				currentCourse++;
 			}
-			
-
-			
 		}
 	}
 
 
 }
 
-//Parse string sent from server
-void GameController::ParseString()
-{
-}

@@ -9,6 +9,7 @@ Network::~Network()
 
 void Network::Connect()
 {
+	std::cout << "Connecting!..." << std::endl;
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
 	if (iResult != 0) {
@@ -84,19 +85,20 @@ void Network::Connect()
 			printf("recv failed with error: %d\n", WSAGetLastError());
 	} while (iResult > 0);*/
 
-	std::cout << "STILL Connected!" << std::endl;
+	std::cout << "Connected!" << std::endl;
 
+	//send hello to get back player id
 	string id = SendData("Hello");
-	cout << id << endl;
+	playerID = stoi(id);
 }
 
 string Network::SendData(std::string data)
 {
 
 	//cout << sizeof(data) / 8;
+	
 
-
-	iResult = send(ConnectSocket, data.c_str(), sizeof(data) + 20, 0);
+	iResult = send(ConnectSocket, data.c_str(), sizeof(data) + 30, 0);
 	if (iResult == SOCKET_ERROR) {
 		printf("send failed with error: %d\n", WSAGetLastError());
 		closesocket(ConnectSocket);
@@ -111,10 +113,31 @@ string Network::SendData(std::string data)
 	iResult = recv(ConnectSocket, recvbuf, recvbuflen, 0);
 	if (iResult > 0)
 	{
-		//printf(recvbuf); cout << endl;
+		string message = recvbuf;
+
+		if (message[0] == 'B') //First char of message should be B
+		{
+			otherID = message.back() - '0';
+			if (shownOtherID == false)
+			{
+				cout << "OtherID: " << to_string(otherID) << endl;
+				shownOtherID = true;
+			}
+		}
+		
 	}
 
 	return recvbuf;
+}
+
+int Network::PlayerID()
+{
+	return playerID;
+}
+
+int Network::OtherID()
+{
+	return otherID;
 }
 
 

@@ -27,8 +27,14 @@ public:
 	~Network();
 	void Connect();
 	string SendData(std::string data);
+	int PlayerID();
+	int OtherID();
 
 private:
+	int playerID;
+	int otherID = -1; //-1 means no othe player is connected to the server
+	bool shownOtherID = false;
+
 	WSADATA wsaData;
 	SOCKET ConnectSocket = INVALID_SOCKET;
 	struct addrinfo* result = NULL, * ptr = NULL, hints;
