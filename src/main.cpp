@@ -40,6 +40,9 @@ void RenderScene(void)
 
 void SpecKeyboardFunc(int key, int x, int y)
 {
+	
+
+
 	controller->SpecialInput(key);
 	
 }
@@ -51,6 +54,7 @@ void SpecKeyboardUpFunc(int key, int x, int y)
 
 void KeyboardFunc(unsigned char key, int x, int y)
 {
+	
 	cam.Update(key, time);
 	controller->Input(key);
 }
@@ -136,9 +140,9 @@ int main(int argc, char **argv)
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(0, 0);
 	glutInitWindowSize(1000, 700);
-	//glutFullScreen();
+	
 	glutCreateWindow("Golf Game");
-
+	glutFullScreen();
 	glutDisplayFunc(RenderScene);
 	glutTimerFunc(10, UpdateScene, 10);
 	glutReshapeFunc(ChangeSize);

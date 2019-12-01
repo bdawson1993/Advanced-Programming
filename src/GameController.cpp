@@ -19,6 +19,9 @@ GameController::GameController(int localPlayers, bool networked)
 	hole2->AddCorner(vec2(1.0f, -2.6f), vec2(-0.6f, -2.6f));
 	loadedCourses.push_back(hole2);
 	networkedGame = networked;
+	
+	
+
 
 	//keep players less than 5
 	if (localPlayers > 5)
@@ -58,6 +61,7 @@ GameController::~GameController()
 
 void GameController::Start()
 {
+	
 	for (int i = 0; i < players.size(); i++)
 	{
 		players[i]->Start();
@@ -66,6 +70,7 @@ void GameController::Start()
 
 void GameController::Update(int ms)
 {
+	textRender.Init();
 	//call update
 	players[currentPlayer]->Update(ms);
 	loadedCourses[currentCourse]->Update(ms);
@@ -98,11 +103,6 @@ void GameController::Update(int ms)
 	}
 }
 
-
-
-	
-
-
 void GameController::Input(char key)
 {
 	//handle input of local players
@@ -110,11 +110,6 @@ void GameController::Input(char key)
 		players[network.PlayerID()]->Input(key);
 	else //handle local game
 		players[currentPlayer]->Input(key);
-
-	if (key == '+')
-	{
-		currentPlayer++;
-	}
 }
 
 void GameController::SpecialInput(char key)
@@ -123,7 +118,7 @@ void GameController::SpecialInput(char key)
 	if (networkedGame == true)
 		players[network.PlayerID()]->SpecialInput(key);
 	else
-		players[currentPlayer]->Input(key);
+		players[currentPlayer]->SpecialInput(key);
 }
 
 void GameController::Render()
@@ -137,7 +132,24 @@ void GameController::Render()
 	glPopMatrix();
 
 	
-	players[currentPlayer]->RenderText();
+	//only draw base UI when game hasn't ended
+	if (!gameHasEnded)
+	{
+		players[currentPlayer]->RenderText();
+		textRender.RenderText("Player " + to_string(currentPlayer + 1) + "s Turn ", (glutGet(GLUT_WINDOW_WIDTH) / 2), 20);
+	}
+	else
+	{
+		textRender.RenderText("Player" + to_string(scoreboard[0].playerNumber + 1) + " Won ", (glutGet(GLUT_WINDOW_WIDTH) / 2), 20);
+		for (int i = 0; i < scoreboard.size(); i++)
+		{
+			textRender.RenderText(to_string(i + 1) +". Player " + to_string(scoreboard[i].playerNumber) + "		Hits" + to_string(scoreboard[i].player.HitCount()),
+				(glutGet(GLUT_WINDOW_WIDTH) / 2), 40 + (20 * i));
+		}
+
+		
+	}
+	
 	
 }
 
@@ -221,18 +233,42 @@ void GameController::CollisionChecks()
 			}
 
 			//check if should move to next player or next course
-			if (currentPlayer <= players.size() - 1)
+			if (currentPlayer < players.size() - 1)
 			{
 				currentPlayer++;
 			}
 			else
 			{
 				currentPlayer = 0;
-				currentCourse++;
+
+				//check if game has ended
+				if (currentCourse < loadedCourses.size() - 1)
+					currentCourse++;
+				else
+				{
+					gameHasEnded = true;
+
+					//build current players into the scoreboard vector and sort
+					for (int i = 0; i < players.size(); i++)
+					{
+						Score score;
+						score.player = *players[i];
+						score.playerNumber = i;
+						scoreboard.push_back(score);
+
+					}
+					Score score;
+					sort(scoreboard.begin(), scoreboard.end(), score);
+				}
 			}
 		}
 	}
 
 
+}
+
+bool GameController::SortPlayers(Score play1, Score play2)
+{
+	return (play1.player.HitCount() < play2.player.HitCount());
 }
 

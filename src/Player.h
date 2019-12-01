@@ -9,6 +9,7 @@ public:
 	Player();
 	~Player();
 
+
 	// Inherited via IGameObject
 	virtual void Start() override;
 	virtual void Draw() override;
@@ -18,6 +19,7 @@ public:
 	virtual void Update(int ms) override;
 	virtual void SpecialInput(char key) override;
 	Ball PlayerBall();
+	int HitCount();
 
 private:
 	Ball* ball;

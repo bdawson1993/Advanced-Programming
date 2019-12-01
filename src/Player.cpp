@@ -26,7 +26,7 @@ void Player::Draw()
 	if (ball->Velocity() == vec2(0, 0))
 	{
 		glPushMatrix();
-		cue->Draw();
+			cue->Draw();
 		glPopMatrix();
 	}
 	
@@ -73,4 +73,9 @@ void Player::SpecialInput(char key)
 Ball Player::PlayerBall()
 {
 	return *ball;
+}
+
+int Player::HitCount()
+{
+	return hitCount;
 }
