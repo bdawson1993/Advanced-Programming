@@ -3,11 +3,12 @@
 Player::Player()
 {
 	ball = new Ball(-2.1);
-	cue = new Cue();
+	put = new Put();
 }
 
 Player::~Player()
 {
+	
 }
 
 void Player::Start()
@@ -26,7 +27,7 @@ void Player::Draw()
 	if (ball->Velocity() == vec2(0, 0))
 	{
 		glPushMatrix();
-			cue->Draw();
+			put->Draw();
 		glPopMatrix();
 	}
 	
@@ -36,11 +37,11 @@ void Player::Draw()
 
 void Player::Input(char key)
 {
-	cue->Input(key);
+	put->Input(key);
 
 	if ((key == ' ') && (ball->Velocity() == vec2(0,0)))
 	{
-		ball->ApplyForce(cue->Force());
+		ball->ApplyForce(put->Force());
 		hitCount++;
 	}
 }
@@ -59,15 +60,15 @@ void Player::RenderText()
 void Player::Update(int ms)
 {
 	IGameObject::Update(ms);
-	cue->SetBallPosition(ball->Position());
-	cue->Update(ms);
+	put->SetBallPosition(ball->Position());
+	put->Update(ms);
 	ball->Update(ms);
 }
 
 void Player::SpecialInput(char key)
 {
 	ball->SpecialInput(key);
-	cue->SpecialInput(key);
+	put->SpecialInput(key);
 }
 
 Ball Player::PlayerBall()

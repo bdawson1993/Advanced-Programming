@@ -37,7 +37,7 @@ public:
 
 	bool SortPlayers(Score play1, Score play2);
 private:
-	int currentCourse = 2;
+	int currentCourse = 0;
 	int currentPlayer = 0;
 	bool networkedGame = 0;
 	bool gameHasEnded = false;

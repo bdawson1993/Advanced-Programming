@@ -10,9 +10,6 @@
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,6 +37,9 @@
     <ClCompile Include="..\src\Parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Put.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\vecmath.h">
@@ -49,9 +49,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.h">
@@ -79,6 +76,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Put.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,7 +1,7 @@
 #pragma once
 #include "IGameObject.h"
 #include "Ball.h"
-#include "Cue.h"
+#include "Put.h"
 
 class Player : public IGameObject
 {
@@ -23,7 +23,7 @@ public:
 
 private:
 	Ball* ball;
-	Cue* cue;
+	Put* put;
 	int hitCount = 0;
 
 	

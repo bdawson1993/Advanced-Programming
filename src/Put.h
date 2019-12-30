@@ -1,7 +1,7 @@
 #pragma once
 #include "IGameObject.h"
 
-class Cue : public IGameObject
+class Put : public IGameObject
 {
 private:
 	vec2 ballPosition;
@@ -11,8 +11,8 @@ private:
 	
 
 public:
-	Cue();
-	~Cue();
+	Put();
+	~Put();
 
 	vec2 Force();
 

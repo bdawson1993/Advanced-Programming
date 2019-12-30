@@ -77,7 +77,9 @@ GameController::GameController(int localPlayers, bool networked)
 
 GameController::~GameController()
 {
-
+	players.clear();
+	loadedCourses.clear();
+	scoreboard.clear();
 }
 
 void GameController::Start()

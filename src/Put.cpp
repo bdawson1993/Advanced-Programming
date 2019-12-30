@@ -1,16 +1,16 @@
-#include "Cue.h"
+#include "Put.h"
 #include <iostream>
 
-Cue::Cue() : IGameObject()
+Put::Put() : IGameObject()
 {
 
 }
 
-Cue::~Cue() 
+Put::~Put()
 {
 }
 
-vec2 Cue::Force()
+vec2 Put::Force()
 {
 	vec2 imp( (-sin(angle) * power * 8.0),
 		(-cos(angle) * power * 8.0));
@@ -18,21 +18,21 @@ vec2 Cue::Force()
 		return imp;
 }
 
-void Cue::SetBallPosition(vec2 pos)
+void Put::SetBallPosition(vec2 pos)
 {
 	ballPosition = pos;
 }
 
-void Cue::Start()
+void Put::Start()
 {
 }
 
-void Cue::Update(int ms)
+void Put::Update(int ms)
 {
 	IGameObject::Update(ms);
 }
 
-void Cue::Draw()
+void Put::Draw()
 {
 
 	float x = sin(angle) * power;
@@ -47,22 +47,22 @@ void Cue::Draw()
 
 }
 
-void Cue::Input(char key)
+void Put::Input(char key)
 {
 	
 }
 
 
 
-void Cue::HasCollided(string name, vec2 collide)
+void Put::HasCollided(string name, vec2 collide)
 {
 }
 
-void Cue::RenderText()
+void Put::RenderText()
 {
 }
 
-void Cue::SpecialInput(char key)
+void Put::SpecialInput(char key)
 {
 	switch (key)
 	{

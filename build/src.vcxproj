@@ -347,8 +347,8 @@
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Ball.cpp" />
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.cpp" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Camera.h" />
-    <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.cpp" />
-    <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Cue.h" />
+    <ClCompile Include="..\src\Put.cpp" />
+    <ClInclude Include="..\src\Put.h" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.h" />
     <ClCompile Include="D:\Libraries\Documents\repos\Advanced-Programming\src\GolfCourse.cpp" />
     <ClInclude Include="D:\Libraries\Documents\repos\Advanced-Programming\src\Hole.h" />
