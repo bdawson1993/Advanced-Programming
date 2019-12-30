@@ -7,6 +7,7 @@ GolfCourse::GolfCourse(vec2 pos)
 
 GolfCourse::~GolfCourse()
 {
+	delete(hole);
 }
 
 vector<Side>* GolfCourse::Corners()

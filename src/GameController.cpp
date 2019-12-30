@@ -18,10 +18,31 @@ GameController::GameController(int localPlayers, bool networked)
 	hole2->AddCorner(vec2(1.0f, 1.5f), vec2(1.0f, -2.6f));
 	hole2->AddCorner(vec2(1.0f, -2.6f), vec2(-0.6f, -2.6f));
 	loadedCourses.push_back(hole2);
-	networkedGame = networked;
+	
+	//create hole 3
+	GolfCourse* hole3 = new GolfCourse(vec2(1.5f, 4.1f));
+	hole3->AddCorner(vec2(-0.6f, -2.6f), vec2(-0.6f, 3.2f));
+	hole3->AddCorner(vec2(-0.6f, 3.2f), vec2(0.9f, 3.2f));
+
+	hole3->AddCorner(vec2(0.9f, 3.2f), vec2(0.9f, 4.5f));
+	hole3->AddCorner(vec2(0.9f, 4.5f), vec2(1.9f, 4.5f));
+
+	hole3->AddCorner(vec2(1.9f, 4.5f), vec2(1.9f, -2.6f));
+	hole3->AddCorner(vec2(1.9f, -2.6f), vec2(-0.6f, -2.6f));
+
 	
 	
 
+	
+	
+
+	
+
+	loadedCourses.push_back(hole3);
+
+	
+	
+	networkedGame = networked;
 
 	//keep players less than 5
 	if (localPlayers > 5)
