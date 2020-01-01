@@ -29,19 +29,26 @@ GameController::GameController(int localPlayers, bool networked)
 
 	hole3->AddCorner(vec2(1.9f, 4.5f), vec2(1.9f, -2.6f));
 	hole3->AddCorner(vec2(1.9f, -2.6f), vec2(-0.6f, -2.6f));
-
-	
-	
-
-	
-	
-
-	
-
 	loadedCourses.push_back(hole3);
 
+	//create hole 4
+	GolfCourse* hole4 = new GolfCourse(vec2(-1.0f, -0.9f));
+	hole4->AddCorner(vec2(-0.6f, -2.6f), vec2(-0.6f, -1.2f));
+	hole4->AddCorner(vec2(-0.6f, -1.2f), vec2(-1.3, -1.2f));
+
+	hole4->AddCorner(vec2(-1.3f, -1.2f), vec2(-1.3f, -0.6f));
+	hole4->AddCorner(vec2(-1.3f, -0.6f), vec2(0.5f, -0.6f));
+
+	hole4->AddCorner(vec2(0.5f, -0.6f), vec2(0.5f, -2.6f));
+	hole4->AddCorner(vec2(0.5f, -2.6f), vec2(-0.6f, -2.6f));
 	
 	
+
+	
+	loadedCourses.push_back(hole4);
+
+	
+	//set all game varibbles 
 	networkedGame = networked;
 
 	//keep players less than 5
@@ -163,6 +170,7 @@ void GameController::Render()
 	}
 	else
 	{
+		//game over UI
 		textRender.RenderText("Player" + to_string(scoreboard[0].playerNumber + 1) + " Won ", (glutGet(GLUT_WINDOW_WIDTH) / 2), 20);
 		for (int i = 0; i < scoreboard.size(); i++)
 		{

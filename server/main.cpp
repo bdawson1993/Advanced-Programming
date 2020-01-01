@@ -220,7 +220,7 @@ int main(int argc, const char** argv)
 			{
 				SendAndRecv(i);
 			}
-			clientLock2.unlock();
+		clientLock2.unlock();
 		
 	} while (iResult > 0);
 

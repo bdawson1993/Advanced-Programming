@@ -5,9 +5,7 @@
 #include "TextRenderer.h"
 #include <iostream>
 
-
 using namespace std;
-
 
 class IGameObject
 {
@@ -17,8 +15,6 @@ protected:
 	int time;
 	TextRenderer text;
 	
-
-
 public:
 	void Init() { text.Init(); }
 	virtual void Start() = 0;
